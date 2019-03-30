@@ -7,10 +7,10 @@ class Enemy extends React.Component {
     return (
       <div class="enemy">
         Enemy hp: {enemy.hp} 
-        Enemy mp: {enemy.mp} 
+        Enemy autoAttack: {enemy.autoAttack} 
       </div>
     )
   }
 }
 
-export default connect (Enemy);
+export default Enemy;

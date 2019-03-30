@@ -1,21 +1,16 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {connect} from 'react-redux'; 
+import Hero from '../hero'; 
+import Enemy from '../enemy';
+
 
 class Game extends React.Component {
 
   render () { 
-    let hero = this.props.hero; 
-    let enemy = this.props.enemy;
     return (
       <div>
-        <h1 className="title">Idle Game</h1> 
-        <div class="hero">
-          hero hp: {hero.hp} 
-          hero mp: {hero.mp} 
-        </div> 
-        <div class="enemy">
-          enemy hp: {enemy.hp}
-        </div>
+        <Hero hero={this.props.hero} /> 
+        <Enemy enemy={this.props.enemy} /> 
       </div>
     )
   }

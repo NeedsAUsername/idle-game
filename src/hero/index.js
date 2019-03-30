@@ -7,10 +7,12 @@ class Hero extends React.Component {
     return (
       <div class="hero">
         hero hp: {hero.hp} 
-        hero mp: {hero.mp} 
+        hero mp: {hero.mp}  
+        hero attack: {hero.attack} 
+        hero auto-attack: {hero.autoAttack}
       </div>
     )
   }
 }
 
-export default connect (Hero);
+export default Hero;
