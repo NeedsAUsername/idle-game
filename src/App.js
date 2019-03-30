@@ -7,6 +7,7 @@ import Game from './game';
 
 class App extends Component {
   componentDidMount() {
+    // todo: store data in local storage with a save button, and grab it on mount
   }
 
   render() {
