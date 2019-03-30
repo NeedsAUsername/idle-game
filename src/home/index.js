@@ -6,7 +6,9 @@ class Home extends React.Component {
     return (
       <div>
         <h1 className="title">Welcome to Idle Game</h1> 
-        <p>Version One Coming Soon</p>
+        <ul>Dev version 1.00 3/30/2019</ul> 
+          <li>Sets up React/Redux template</li> 
+          <li>Creates game, user, and enemy components</li>
       </div>
     )
   }
