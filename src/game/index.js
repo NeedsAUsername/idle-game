@@ -8,7 +8,7 @@ class Game extends React.Component {
 
   render () { 
     return (
-      <div>
+      <div className="game">
         <Hero hero={this.props.hero} /> 
         <Enemy enemy={this.props.enemy} /> 
       </div>

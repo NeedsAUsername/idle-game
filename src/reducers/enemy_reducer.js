@@ -1,6 +1,9 @@
 function heroReducer(state ={
+  name: 'Weak Slime',
   hp: 100, 
-  autoAttack: 1
+  autoAttack: 1, 
+  exp: 10, 
+  gold: 5
 }, action) {
 console.log(action) 
 

@@ -5,11 +5,14 @@ class Hero extends React.Component {
   render () { 
     let hero = this.props.hero; 
     return (
-      <div class="hero">
-        hero hp: {hero.hp} 
-        hero mp: {hero.mp}  
-        hero attack: {hero.attack} 
-        hero auto-attack: {hero.autoAttack}
+      <div className="hero">  
+        <ul>Hero: {hero.name} </ul>
+        <li className="stat">hero level: {hero.level}</li>
+        <li className="stat">hero exp: {hero.exp} / {hero.expToLevel}</li>
+        <li className="stat">hero hp: {hero.hp}</li>
+        <li className="stat">hero mp: {hero.mp} </li>
+        <li className="stat">hero attack: {hero.attack}</li>
+        <li className="stat">hero auto-attack: {hero.autoAttack}</li>
       </div>
     )
   }
