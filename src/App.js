@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
-import './App.css';
+import './App.css';  
+import Game from './game';
 
 class App extends Component {
   componentDidMount() {
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <h1>Idle Game</h1>
+        <Route exact path='/game' component={Game} />
         </div>
       </Router>
     );
