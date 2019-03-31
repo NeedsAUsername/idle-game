@@ -9,10 +9,14 @@ function heroReducer(state ={
 console.log(action) 
 
   switch(action.type) {
-    case 'ENEMY_TAKES_DAMAGE': 
+    case 'ENEMY_TAKES_DAMAGE':  
+      let hpAfterDamage = state.currentHp - action.payload.damage;
+      if (hpAfterDamage < 0) {
+        hpAfterDamage = 0;
+      }
       return {
         ...state, 
-        currentHp: state.currentHp - payload
+        currentHp: hpAfterDamage
       }
 
     

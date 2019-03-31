@@ -13,7 +13,7 @@ class Enemy extends React.Component {
       width: this.getPercentageHealth() + '%', 
       backgroundColor: 'black'
     }
-  }
+  } 
 
   render () { 
     let enemy = this.props.enemy;  
@@ -21,8 +21,8 @@ class Enemy extends React.Component {
     return (
       <div className="enemy">
         <ul>Enemy: {enemy.name}</ul> 
-        <div class="health-bar-container">
-          <div class="health-bar" style={healthBarStyle}></div>
+        <div className="health-bar-container">
+          <div className="health-bar" style={healthBarStyle}></div>
         </div>
         <li className="stat">Enemy hp: {enemy.currentHp} / {enemy.totalHp} </li>
         <li className="stat">Enemy autoAttack: {enemy.autoAttack}</li> 
