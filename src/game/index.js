@@ -1,5 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'; 
+import {connect} from 'react-redux';  
+import './style.css';
 import Hero from '../hero'; 
 import Enemy from '../enemy';
 import {attack} from '../actions/hero/attack';
@@ -9,10 +10,10 @@ class Game extends React.Component {
 
   render () { 
     return (
-      <div className="game">
+      <main className="game">
         <Hero hero={this.props.hero} attack={this.props.attack} /> 
         <Enemy enemy={this.props.enemy} /> 
-      </div>
+      </main>
     )
   }
 }

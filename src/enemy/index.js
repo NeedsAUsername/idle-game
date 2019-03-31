@@ -5,13 +5,22 @@ class Enemy extends React.Component {
 
   getPercentageHealth = () => {
     return this.props.enemy.currentHp/this.props.enemy.totalHp * 100
-  } 
+  }  
+  getHealthBarColor = () => { 
+    if (this.getPercentageHealth() > 60) {
+      return 'green'
+    } else if (this.getPercentageHealth() > 25) {
+      return 'yellow'
+    } else {
+      return 'red'
+    }
+  }
 
   getHealthBarStyle = () => {
     return {
       height: '100%',
       width: this.getPercentageHealth() + '%', 
-      backgroundColor: 'black'
+      backgroundColor: this.getHealthBarColor()
     }
   } 
 
