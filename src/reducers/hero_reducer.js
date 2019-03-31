@@ -1,7 +1,9 @@
 function heroReducer(state ={
 		name: 'Aspiring Hero', 
-    hp: 100, 
-		mp: 100,
+		totalHp: 100,
+		currentHp: 100,  
+		totalMp: 100, 
+		currentMp: 100, 
 		level: 0,  
 		exp: 0,
 		expToLevel: 50,

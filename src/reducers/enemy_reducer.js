@@ -1,6 +1,7 @@
 function heroReducer(state ={
   name: 'Weak Slime',
-  hp: 100, 
+  totalHp: 100,
+  currentHp: 100,  
   autoAttack: 1, 
   exp: 10, 
   gold: 5
