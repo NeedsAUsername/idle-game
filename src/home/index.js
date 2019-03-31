@@ -7,6 +7,10 @@ class Home extends React.Component {
       <div>
         <h1 className="title">Welcome to Idle Game</h1>  
         <a href='/game' className="link">Play</a>
+        <p>check out the source code at </p>
+        <ul>Dev version 2.00 3/31/2019</ul> 
+          <li>Creates basic gameplay functionality</li>
+          <li>Hero is able to attack and defeat the enemy, gain exp/gold, and level up</li>
         <ul>Dev version 1.00 3/30/2019</ul> 
           <li>Sets up React/Redux template</li> 
           <li>Creates game, user, and enemy components</li>
