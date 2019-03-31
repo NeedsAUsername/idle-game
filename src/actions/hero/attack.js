@@ -12,4 +12,4 @@ export function attack(attack) {
       payload: attack
     })
   }
-}
+} 

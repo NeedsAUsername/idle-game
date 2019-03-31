@@ -1,4 +1,4 @@
-function heroReducer(state ={
+function heroReducer(state = {
 		name: 'Aspiring Hero', 
 		totalHp: 100,
 		currentHp: 100,  
@@ -14,6 +14,14 @@ function heroReducer(state ={
 	console.log(action) 
 
 	switch(action.type) {
+
+		case 'DEFEATS_ENEMY':  
+			let enemy = action.payload
+			return {
+				...state, 
+				exp: state.exp + enemy.exp, 
+				gold: state.gold + enemy.gold
+			}
 		
 		default: 
 			return state
