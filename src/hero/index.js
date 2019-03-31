@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'; 
+import './style.css';
 
 class Hero extends React.Component { 
 
@@ -14,16 +15,19 @@ class Hero extends React.Component {
     return (
       <div className="hero">  
         <h2>Hero: {hero.name} </h2> 
-        <ul>Attacks</ul> 
-        <li className="attack" onClick={this.attackEnemy}>Basic Attack</li>
 
-        <ul>Stats</ul>
-        <li className="stat">hero level: {hero.level}</li>
-        <li className="stat">hero exp: {hero.exp} / {hero.expToLevel}</li>
-        <li className="stat">hero hp: {hero.currentHp} / {hero.totalHp} </li>
-        <li className="stat">hero mp: {hero.currentMp} / {hero.totalMp} </li>
-        <li className="stat">hero attack: {hero.attack}</li>
-        <li className="stat">hero auto-attack: {hero.autoAttack}</li>
+        <ul className="attacks-list"><h3>Attacks</h3> 
+          <li className="button attack" onClick={this.attackEnemy}>Basic Attack</li>
+        </ul>
+
+        <ul className="stat-list"><h3>Hero Stats</h3>
+          <li className="stat">Level: {hero.level}</li>
+          <li className="stat">Exp: {hero.exp} / {hero.expToLevel}</li>
+          <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
+          <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
+          <li className="stat">Attack: {hero.attack}</li>
+          <li className="stat">Auto-attack: {hero.autoAttack}</li> 
+        </ul>
       </div>
     )
   }
