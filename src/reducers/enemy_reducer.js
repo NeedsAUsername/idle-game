@@ -9,6 +9,12 @@ function heroReducer(state ={
 console.log(action) 
 
   switch(action.type) {
+    case 'ENEMY_TAKES_DAMAGE': 
+      return {
+        ...state, 
+        currentHp: state.currentHp - payload
+      }
+
     
     default: 
       return state
