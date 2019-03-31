@@ -4,9 +4,9 @@ function heroReducer(state = {
 		currentHp: 100,  
 		totalMp: 100, 
 		currentMp: 100, 
-		level: 0,  
+		level: 1,  
 		exp: 0,
-		expToLevel: 50,
+		expToLevelUp: 50,
 		gold: 0, 
     attack: 10, 
 		autoAttack: 0
@@ -16,11 +16,20 @@ function heroReducer(state = {
 	switch(action.type) {
 
 		case 'DEFEATS_ENEMY':  
-			let enemy = action.payload
+			let enemy = action.payload;
 			return {
 				...state, 
 				exp: state.exp + enemy.exp, 
 				gold: state.gold + enemy.gold
+			}
+
+		case 'LEVEL_UP': 
+			let excessExp = action.payload;
+			return {
+				...state, 
+				level: state.level + 1, 
+				exp: excessExp, 
+				expToLevelUp: state.expToLevelUp + 10
 			}
 		
 		default: 

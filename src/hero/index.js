@@ -22,7 +22,7 @@ class Hero extends React.Component {
 
         <ul className="stat-list"><h3>Hero Stats</h3>
           <li className="stat">Level: {hero.level}</li>
-          <li className="stat">Exp: {hero.exp} / {hero.expToLevel}</li> 
+          <li className="stat">Exp: {hero.exp} / {hero.expToLevelUp}</li> 
           <li className="stat">Gold: {hero.gold}</li>
           <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
           <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>

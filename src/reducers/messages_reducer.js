@@ -9,6 +9,10 @@ console.log(action)
       state.push(`you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.gold} gold`)
       return state
     
+    case 'LEVEL_UP': 
+      state.push('You have leveled up!') 
+      return state
+    
     default: 
       return state
   }
