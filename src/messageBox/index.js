@@ -12,7 +12,7 @@ class MessageBox extends React.Component {
   render () { 
     return (
       <div className="MessageBox">  
-        <ul className="messages">Message Box
+        <ul className="messages-list"><h3>Message Box</h3>
           {this.renderMessages()}
         </ul> 
       </div>

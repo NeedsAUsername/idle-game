@@ -1,4 +1,4 @@
-function heroReducer(state ={
+function heroReducer(state = {
   name: 'Weak Slime',
   totalHp: 100,
   currentHp: 100,  
@@ -20,6 +20,11 @@ console.log(action)
         currentHp: hpAfterDamage
       }
 
+    case 'DEFEATS_ENEMY': 
+      return {
+        ...state, 
+        currentHp: state.totalHp
+      }
     
     default: 
       return state
