@@ -8,8 +8,9 @@ function heroReducer(state = {
 		exp: 0,
 		expToLevelUp: 50,
 		gold: 0, 
-    attack: 10, 
-		autoAttack: 0
+		attack: 10, 
+		autoAttack: 0, 
+		attackSpeed: 1000
 }, action) {
 	console.log(action) 
 

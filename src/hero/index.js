@@ -3,11 +3,19 @@ import './style.css';
 
 class Hero extends React.Component { 
 
-  attackEnemy = (event) => {
-    event.preventDefault(); 
+  attackEnemy = (event) => {  
+    let attackButton = event.target
+    if (event.target.classList.contains('disabled')) {
+      return false
+    }
+    event.preventDefault();  
     this.props.attack({
       damage: this.props.hero.attack
-    })
+    }) 
+    attackButton.classList.add('disabled') 
+    setTimeout(function() {
+      attackButton.classList.remove('disabled')
+    }, this.props.hero.attackSpeed)
   }
 
   render () { 
@@ -16,7 +24,7 @@ class Hero extends React.Component {
       <div className="hero">  
         <h2>Hero: {hero.name} </h2> 
         <div className="attacking"></div>
-        
+
         <ul className="attacks-list"><h3>Attacks</h3> 
           <li className="button attack" onClick={this.attackEnemy}>Basic Attack</li>
         </ul>
@@ -29,6 +37,7 @@ class Hero extends React.Component {
           <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
           <li className="stat">Attack: {hero.attack}</li>
           <li className="stat">Auto-attack: {hero.autoAttack}</li> 
+          <li className="stat">Attack Speed: {hero.attackSpeed / 1000} second</li>
         </ul>
       </div>
     )
