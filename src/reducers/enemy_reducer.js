@@ -2,7 +2,8 @@ function heroReducer(state = {
   name: 'Shroom', 
   animations: {
     walking: 'shroom-walking', 
-    hurt: 'shroom-hurt'
+    hurt: 'shroom-hurt', 
+    dying: 'shroom-dying'
   }, 
   currentAnimation: 'shroom-walking', 
   totalHp: 100,
@@ -23,19 +24,20 @@ console.log(action)
       return {
         ...state, 
         currentHp: hpAfterDamage, 
-        currentAnimation: 'shroom-hurt'
+        currentAnimation: state.animations.hurt
       }
 
     case 'DEFEATS_ENEMY': 
       return {
         ...state, 
-        currentHp: state.totalHp
+        currentHp: state.totalHp, 
+        currentAnimation: state.animations.dying
       }
 
     case 'STOP_ENEMY_ANIMATION': 
       return {
         ...state, 
-        currentAnimation: 'shroom-walking'
+        currentAnimation: state.animations.walking
       }
     
     default: 
