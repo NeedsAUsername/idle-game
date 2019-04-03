@@ -15,7 +15,8 @@ class Hero extends React.Component {
     return (
       <div className="hero">  
         <h2>Hero: {hero.name} </h2> 
-
+        <div className="attacking"></div>
+        
         <ul className="attacks-list"><h3>Attacks</h3> 
           <li className="button attack" onClick={this.attackEnemy}>Basic Attack</li>
         </ul>

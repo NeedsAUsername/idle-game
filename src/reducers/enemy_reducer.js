@@ -1,5 +1,10 @@
 function heroReducer(state = {
-  name: 'Weak Slime',
+  name: 'Shroom', 
+  animations: {
+    walking: 'shroom-walking', 
+    hurt: 'shroom-hurt'
+  }, 
+  currentAnimation: 'shroom-walking', 
   totalHp: 100,
   currentHp: 100,  
   autoAttack: 1, 
@@ -17,13 +22,20 @@ console.log(action)
       }
       return {
         ...state, 
-        currentHp: hpAfterDamage
+        currentHp: hpAfterDamage, 
+        currentAnimation: 'shroom-hurt'
       }
 
     case 'DEFEATS_ENEMY': 
       return {
         ...state, 
         currentHp: state.totalHp
+      }
+
+    case 'STOP_ENEMY_ANIMATION': 
+      return {
+        ...state, 
+        currentAnimation: 'shroom-walking'
       }
     
     default: 
