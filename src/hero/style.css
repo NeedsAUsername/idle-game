@@ -16,7 +16,7 @@
   transform: scaleX(-1); 
   background: url('http://www.smackjeeves.com/images/uploaded/comics/2/g/t/2gtta7wxf22SUr.png'); 
   background-position: 100% -100px;
-  animation: attack 1s steps(2) 
+  /* animation: attack 1s steps(2)  */
 }  
 
 @keyframes attack { 
