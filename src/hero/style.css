@@ -10,19 +10,33 @@
   list-style: none;
 }
 
-.attacking {
-  width: 180px; 
-  height: 150px; 
+.hero {
+  margin-left: 10px; 
+}
+
+.standing {
+  width: 50px; 
+  height: 70px; 
   transform: scaleX(-1); 
-  background: url('http://www.smackjeeves.com/images/uploaded/comics/2/g/t/2gtta7wxf22SUr.png'); 
-  background-position: 100% -100px;
-  /* animation: attack 1s steps(2)  */
+  background: url('../images/stand.png');
+  animation: stand 1s steps(2) infinite; 
+}
+@keyframes stand {
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.attacking {
+  width: 65px; 
+  height: 70px; 
+  transform: scaleX(-1); 
+  background: url('../images/swing1.png');
+  animation: attack .5s steps(3); 
 }  
 
 @keyframes attack { 
   100% { 
-    /* margin-left: 70px; */
-    width: 50px;
-    background-position: 70% -100px;
+    background-position: 100% 0;
   }
 } 

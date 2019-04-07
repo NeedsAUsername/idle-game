@@ -15,7 +15,7 @@ function heroReducer(state = {
 console.log(action) 
 
   switch(action.type) { 
-    case 'ENEMY_TAKES_DAMAGE':  
+    case 'HERO_ATTACKS':  
       let attack = action.payload;
       let hpAfterDamage = state.currentHp - attack.damage;
       if (hpAfterDamage < 0) {

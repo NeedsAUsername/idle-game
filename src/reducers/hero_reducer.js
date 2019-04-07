@@ -10,11 +10,23 @@ function heroReducer(state = {
 		gold: 0, 
 		attack: 10, 
 		autoAttack: 0, 
-		attackSpeed: 1000
+		attackSpeed: 1000, 
+		currentAnimation: 'standing'
 }, action) {
 	console.log(action) 
 
 	switch(action.type) {
+		case 'HERO_ATTACKS': 
+			return {
+				...state, 
+				currentAnimation: 'attacking'
+			}
+
+		case 'STOP_HERO_ANIMATION': 
+			return {
+				...state, 
+				currentAnimation: 'standing'
+			}
 
 		case 'DEFEATS_ENEMY':  
 			let enemy = action.payload;

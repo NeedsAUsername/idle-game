@@ -8,12 +8,15 @@
 export function attack(attack) {
   return (dispatch) => {
     dispatch({
-      type: 'ENEMY_TAKES_DAMAGE', 
+      type: 'HERO_ATTACKS', 
       payload: attack
     }) 
     setTimeout(function() {
       dispatch({
         type: 'STOP_ENEMY_ANIMATION',
+      }) 
+      dispatch({
+        type: 'STOP_HERO_ANIMATION'
       })
     }, 500)
   }
