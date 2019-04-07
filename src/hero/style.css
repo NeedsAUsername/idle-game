@@ -38,7 +38,7 @@
   height: 70px; 
   transform: scaleX(-1); 
   background: url('../images/swing1.png');
-  animation: attack .5s steps(3); 
+  animation: attack .4s steps(3); 
 }  
 
 @keyframes attack { 
@@ -48,7 +48,7 @@
 } 
 
 .star { 
-  margin-left: -30px;
+  margin-left: -45px;
   margin-top: 20px;
   width: 70px; 
   height: 50px;
@@ -59,7 +59,7 @@
 .subi {
   background-position: 0 -655px;
   animation: subi .2s steps(2) infinite,
-              throw 2s linear infinite;
+              throw 2s .04s linear;
 } 
 @keyframes subi {
   100% {
@@ -70,6 +70,6 @@
 
 @keyframes throw {
   100% {
-    transform: translateX(1000px) scaleX(-1)
+    transform: translateX(1200px) scaleX(-1)
   }
 }
