@@ -1,5 +1,5 @@
 function heroReducer(state = {
-		name: 'Aspiring Hero', 
+		name: 'Theif 1st Class: Rogue', 
 		totalHp: 100,
 		currentHp: 100,  
 		totalMp: 100, 

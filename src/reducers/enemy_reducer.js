@@ -6,8 +6,8 @@ function heroReducer(state = {
     dying: 'shroom-dying'
   }, 
   currentAnimation: 'shroom-walking', 
-  totalHp: 100,
-  currentHp: 100,  
+  totalHp: 20,
+  currentHp: 20,  
   autoAttack: 1, 
   exp: 10, 
   gold: 5
@@ -15,7 +15,7 @@ function heroReducer(state = {
 console.log(action) 
 
   switch(action.type) { 
-    case 'HERO_ATTACKS':  
+    case 'ENEMY_TAKES_DAMAGE':  
       let attack = action.payload;
       let hpAfterDamage = state.currentHp - attack.damage;
       if (hpAfterDamage < 0) {

@@ -22,14 +22,16 @@ class Hero extends React.Component {
     let hero = this.props.hero; 
     return (
       <div className="hero">  
-        <h2>Hero: {hero.name} </h2> 
-        <div className={hero.currentAnimation}></div>
-
+        <h2>{hero.name} </h2> 
+        <div className="hero-sprite-container">
+          <div className={hero.currentAnimation}></div>
+          <div className={hero.currentAnimation === 'attacking' ? 'star subi' : null}></div>
+        </div>
         <ul className="attacks-list"><h3>Attacks</h3> 
           <li className="button attack" onClick={this.attackEnemy}>Basic Attack</li>
         </ul>
 
-        <ul className="stat-list"><h3>Hero Stats</h3>
+        <ul className="stat-list"><h3>Character Stats</h3>
           <li className="stat">Level: {hero.level}</li>
           <li className="stat">Exp: {hero.exp} / {hero.expToLevelUp}</li> 
           <li className="stat">Gold: {hero.gold}</li>

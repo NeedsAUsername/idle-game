@@ -13,7 +13,10 @@
 .hero {
   margin-left: 10px; 
 }
-
+.hero-sprite-container {
+  display: flex; 
+  flex-direction: row;
+}
 .standing {
   width: 50px; 
   height: 70px; 
@@ -40,3 +43,30 @@
     background-position: 100% 0;
   }
 } 
+
+.star { 
+  margin-left: -10px;
+  margin-top: 20px;
+  width: 70px; 
+  height: 50px;
+  transform: scaleX(-1);
+  background: url('../images/throwing-stars.png'); 
+}
+
+.subi {
+  background-position: 0 -655px;
+  animation: subi .2s steps(2) infinite,
+              throw 2s linear infinite;
+} 
+@keyframes subi {
+  100% {
+    background-position: -195px -655px;
+  }
+}
+
+
+@keyframes throw {
+  100% {
+    transform: translateX(500px) scaleX(-1)
+  }
+}
