@@ -7,7 +7,7 @@ function heroReducer(state = {
 		level: 1,  
 		exp: 0,
 		expToLevelUp: 50,
-		gold: 0, 
+		mesos: 0, 
 		attack: 10, 
 		autoAttack: 0, 
 		attackSpeed: 1000, 
@@ -33,7 +33,7 @@ function heroReducer(state = {
 			return {
 				...state, 
 				exp: state.exp + enemy.exp, 
-				gold: state.gold + enemy.gold
+				mesos: state.mesos + enemy.mesos
 			}
 
 		case 'LEVEL_UP': 

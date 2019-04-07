@@ -1,5 +1,5 @@
 .enemy-sprite {
-  margin-top: 200px;
+  margin-top: 240px;
 }
 
 .health-bar-container {
@@ -9,6 +9,17 @@
   border-width: 1px;
 }
 
+.damage-numbers {
+  display: none;
+} 
+.damage-numbers-animation {
+  animation: show-damage-numbers 1s 
+} 
+@keyframes show-damage-numbers {
+  100% {
+    transform: translateY(500px)
+  }
+}
 .shroom-walking {
   width: 41px; 
   height: 45px;

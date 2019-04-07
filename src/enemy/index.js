@@ -29,12 +29,13 @@ class Enemy extends React.Component {
     let healthBarStyle = this.getHealthBarStyle();
     return (
       <div className="enemy">
-        <h3>Enemy: {enemy.name}</h3>
-        <div className={"enemy-sprite " + enemy.currentAnimation}></div>
+        <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
+        <div className="damage-numbers">{enemy.lastDamageTaken}</div>
         <div className="health-bar-container">
-          <div className="health-bar" style={healthBarStyle}></div>
+          <div className="health-bar" style={healthBarStyle}></div> 
         </div>
-        <li className="stat">Enemy hp: {enemy.currentHp} / {enemy.totalHp} </li>
+        <h3>{enemy.name}</h3>
+        <li className="stat">Hp: {enemy.currentHp} / {enemy.totalHp} </li>
       </div>
     )
   }
