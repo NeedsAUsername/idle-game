@@ -11,11 +11,14 @@
 }
 
 .hero {
-  margin-left: 10px; 
+  margin-left: 100px; 
 }
-.hero-sprite-container {
+.hero-sprite-container { 
+  margin-left: 50px;
+  margin-top: 165px;
   display: flex; 
-  flex-direction: row;
+  flex-direction: row; 
+  width: 300px;
 }
 .standing {
   width: 50px; 
@@ -45,7 +48,7 @@
 } 
 
 .star { 
-  margin-left: -10px;
+  margin-left: -30px;
   margin-top: 20px;
   width: 70px; 
   height: 50px;
@@ -67,6 +70,6 @@
 
 @keyframes throw {
   100% {
-    transform: translateX(500px) scaleX(-1)
+    transform: translateX(1000px) scaleX(-1)
   }
 }

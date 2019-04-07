@@ -29,8 +29,8 @@ class Enemy extends React.Component {
     let healthBarStyle = this.getHealthBarStyle();
     return (
       <div className="enemy">
-        <h3>Enemy: {enemy.name}</h3>   
-        <div className={enemy.currentAnimation}></div>
+        <h3>Enemy: {enemy.name}</h3>
+        <div className={"enemy-sprite " + enemy.currentAnimation}></div>
         <div className="health-bar-container">
           <div className="health-bar" style={healthBarStyle}></div>
         </div>

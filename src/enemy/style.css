@@ -1,5 +1,9 @@
+.enemy-sprite {
+  margin-top: 200px;
+}
+
 .health-bar-container {
-  width: 500px;  
+  min-width: 200px;  
   height: 20px; 
   border-style: solid;
   border-width: 1px;
