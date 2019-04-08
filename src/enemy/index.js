@@ -24,13 +24,19 @@ class Enemy extends React.Component {
     }
   } 
 
+  displayDamageNumbers = () => (
+    this.props.enemy.damagesTaken.map(damage => 
+    <div className="damage-numbers">{damage}</div>)
+  )
+
   render () { 
     let enemy = this.props.enemy;  
     let healthBarStyle = this.getHealthBarStyle();
     return (
       <div className="enemy">
+        <div className="empty-space"></div>
+        {this.displayDamageNumbers()}
         <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
-        <div className="damage-numbers">{enemy.lastDamageTaken}</div>
         <div className="health-bar-container">
           <div className="health-bar" style={healthBarStyle}></div> 
         </div>

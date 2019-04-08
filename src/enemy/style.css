@@ -1,4 +1,4 @@
-.enemy-sprite {
+.empty-space {
   margin-top: 240px;
 }
 
@@ -10,14 +10,18 @@
 }
 
 .damage-numbers {
-  display: none;
+  opacity: 0; 
+  float: left; 
+  position: absolute;
+  z-index: 2;
+  animation: show-damage-numbers 1s;
 } 
-.damage-numbers-animation {
-  animation: show-damage-numbers 1s 
-} 
-@keyframes show-damage-numbers {
+@keyframes show-damage-numbers { 
+  0% {
+    opacity: 1;
+  }
   100% {
-    transform: translateY(500px)
+    transform: translateY(-100px)
   }
 }
 .shroom-walking {
