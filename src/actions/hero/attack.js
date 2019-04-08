@@ -5,7 +5,7 @@
 //    ticks: 5
 // }, etc.}
 
-export function attack(attack, enemy) {
+export function attack(attack, enemy, hero) {
   return (dispatch) => { 
     dispatch({
       type: 'HERO_ATTACKS'
@@ -16,10 +16,17 @@ export function attack(attack, enemy) {
         payload: attack
       }) 
       if (enemy.currentHp <= attack.damage) {
-        dispatch({
-          type: 'DEFEATS_ENEMY', 
-          payload: enemy
-        })
+        console.log(hero.exp, enemy.exp, hero.expToLevelUp)
+        if ((hero.exp + enemy.exp) >= hero.expToLevelUp) {
+          dispatch({
+            type: 'DEFEATS_ENEMY_AND_LEVELS_UP'
+          })
+        } else {
+          dispatch({
+            type: 'DEFEATS_ENEMY', 
+            payload: enemy
+          })
+        }
       } 
       dispatch({
         type: 'STOP_HERO_ANIMATION'

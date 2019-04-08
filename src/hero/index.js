@@ -41,7 +41,7 @@ class Hero extends React.Component {
           <li className="stat">Mesos: {hero.mesos}</li>
           <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
           <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
-          <li className="stat">Attack: {hero.attack}</li>
+          <li className="stat">Range: {hero.minRange} ~ {hero.maxRange}</li>
           <li className="stat">Auto-attack: {hero.autoAttack}</li> 
           <li className="stat">Attack Speed: {hero.attackSpeed / 1000} second</li>
         </ul>

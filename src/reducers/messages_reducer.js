@@ -3,10 +3,13 @@ function messagesReducer(state = [
 ], action) {
 console.log(action) 
 
+  if (state.length > 10) {
+    state.shift()
+  }
   switch(action.type) {
-    case 'DEFEATS_ENEMY':  
+    case 'DEFEATS_ENEMY':   
       let enemy = action.payload;
-      state.push(`you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.mesos} mesos`)
+      state.push(`you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.mesos} mesos`) 
       return state
     
     case 'LEVEL_UP': 

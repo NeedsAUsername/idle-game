@@ -6,7 +6,7 @@ function heroReducer(state = {
 		currentMp: 100, 
 		level: 1,  
 		exp: 0,
-		expToLevelUp: 50,
+		expToLevelUp: 10,
 		mesos: 0, 
 		attack: 10, 
 		minRange: 5, 
@@ -31,19 +31,24 @@ function heroReducer(state = {
 			}
 
 		case 'DEFEATS_ENEMY':  
-			let enemy = action.payload;
+			let enemy = action.payload; 
+			let newExp = state.exp + enemy.exp; 
 			return {
 				...state, 
-				exp: state.exp + enemy.exp, 
+				exp: newExp,
 				mesos: state.mesos + enemy.mesos
 			}
 
-		case 'LEVEL_UP': 
-			let excessExp = action.payload;
+		case 'DEFEATS_ENEMY_AND_LEVELS_UP': 
 			return {
 				...state, 
 				level: state.level + 1, 
-				exp: excessExp, 
+				hp: state.hp + 10, 
+				mp: state.map + 5, 
+				attack: state.attack + 1, 
+				minRange: state.minRange + 1, 
+				maxRange: state.maxRange + 1,
+				exp: 0,
 				expToLevelUp: state.expToLevelUp + 10
 			}
 		
