@@ -12,8 +12,7 @@ class Game extends React.Component {
 
   calculateAttack = (attack) => { 
     let hero = this.props.hero; 
-    let enemy = this.props.enemy; 
-    console.log(enemy)
+    let enemy = this.props.enemy;
     this.props.attack(attack, enemy)
     if ((hero.expToLevelUp - hero.exp) <= enemy.exp) {
       this.props.levelUp(hero.exp + enemy.exp - hero.expToLevelUp);

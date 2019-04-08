@@ -10,14 +10,18 @@ class Hero extends React.Component {
     }
     event.preventDefault();  
     this.props.attack({
-      damage: this.props.hero.attack
+      damage: this.calculateDamage()
     }) 
     attackButton.classList.add('disabled') 
     setTimeout(function() {
       attackButton.classList.remove('disabled')
     }, this.props.hero.attackSpeed)
   }
-
+  
+  calculateDamage = () => {
+    let hero = this.props.hero;
+    return Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange;
+  }
   render () { 
     let hero = this.props.hero; 
     return (

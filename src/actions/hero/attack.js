@@ -10,8 +10,7 @@ export function attack(attack, enemy) {
     dispatch({
       type: 'HERO_ATTACKS'
     }) 
-    setTimeout(function() {  
-      console.log('enemy:' + enemy.hp, 'attack:' + attack.damage)
+    setTimeout(function() { 
       dispatch({
         type: 'ENEMY_TAKES_DAMAGE', 
         payload: attack
