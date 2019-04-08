@@ -13,6 +13,7 @@
 .hero {
   margin-left: 100px; 
 }
+
 .hero-sprite-container { 
   margin-left: 50px;
   margin-top: 165px;
@@ -71,5 +72,23 @@
 @keyframes throw {
   100% {
     transform: translateX(1200px) scaleX(-1)
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .hero {
+    margin-left: auto; 
+  } 
+  .hero-sprite-container { 
+    margin-left: auto;
+    padding: 0;
+    margin-top: 0; 
+    width: auto;
+  }
+  @keyframes throw {
+    100% {
+      transform: translateX(500px) scaleX(-1)
+    }
   }
 }

@@ -24,18 +24,12 @@ class Enemy extends React.Component {
       backgroundColor: this.getHealthBarColor()
     }
   } 
-  damageNumberStyle = (index) => {
-    return { 
-      zIndex: index
-    }
-  }
+
   displayDamageNumbers = () => (
     this.props.enemy.damagesTaken.map((damage, index) => 
       <Number key={index} number={damage}/>
     )
   )
-
-
   render () { 
     
     let enemy = this.props.enemy;  
@@ -43,7 +37,6 @@ class Enemy extends React.Component {
     return (
       <div className="enemy">
         <div className="empty-space"></div> 
-      
         {this.displayDamageNumbers()}
         <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
         <div className="health-bar-container">
