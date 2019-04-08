@@ -1,0 +1,65 @@
+
+.damage-numbers { 
+  display: flex; 
+  flex-direction: row; 
+  position: absolute; 
+  top: 200px;
+}
+.damage-number { 
+  opacity: 0;
+  width: 55px;
+  height: 65px;
+  margin-left: -20px;
+  float: left;
+  background-repeat: no-repeat;
+  animation: show-damage-numbers .8s ease-out;
+} 
+@keyframes show-damage-numbers { 
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50px)
+  } 
+}
+.damage-0 {
+  background: url("../images/damage/0.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-1 {
+  background: url("../images/damage/1.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-2 {
+  background: url("../images/damage/2.png"); 
+  background-repeat: no-repeat;
+}
+.damage-3 {
+  background: url("../images/damage/3.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-4 {
+  background: url("../images/damage/4.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-5 {
+  background: url("../images/damage/5.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-6 {
+  background: url("../images/damage/6.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-7 {
+  background: url("../images/damage/7.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-8 {
+  background: url("../images/damage/8.png"); 
+  background-repeat: no-repeat;
+} 
+.damage-9 {
+  background: url("../images/damage/9.png"); 
+  background-repeat: no-repeat;
+} 

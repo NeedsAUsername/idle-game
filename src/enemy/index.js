@@ -1,5 +1,6 @@
 import React from 'react'; 
 import './style.css'; 
+import Number from '../Number';
 
 class Enemy extends React.Component {
 
@@ -30,11 +31,10 @@ class Enemy extends React.Component {
   }
   displayDamageNumbers = () => (
     this.props.enemy.damagesTaken.map((damage, index) => 
-    <div key={index} className="damage-numbers">
-      <div className={"damage-number damage-" + index} style={this.damageNumberStyle(0)}></div>
-      <div className={"damage-number damage-" + index} style={this.damageNumberStyle(1)}></div>
-    </div>)
+      <Number key={index} number={damage}/>
+    )
   )
+
 
   render () { 
     
