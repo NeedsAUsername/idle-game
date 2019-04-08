@@ -19,10 +19,6 @@ console.log(action)
     case 'ENEMY_TAKES_DAMAGE':  
       let attack = action.payload;
       let hpAfterDamage = state.currentHp - attack.damage; 
-      if (state.damagesTaken.length > 5000) {
-        state.damagesTaken = state.damagesTaken.slice(4950, 5000); // keeps the array from becoming too big 
-        // to fix: damage won't animate on the attack where this is triggered
-      }
       if (hpAfterDamage < 0) {
         hpAfterDamage = 0;
       } 
@@ -48,6 +44,9 @@ console.log(action)
     } 
 
     case 'STOP_ENEMY_ANIMATION': 
+      if (state.damagesTaken.length > 100) {
+        state.damagesTaken = []; // keeps the array from becoming too big
+      }
       return {
         ...state, 
         currentAnimation: state.animations.walking
