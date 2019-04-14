@@ -8,9 +8,9 @@ function heroReducer(state = {
 		exp: 0,
 		expToLevelUp: 10,
 		mesos: 0, 
-		attack: 10, 
-		minRange: 5, 
-		maxRange: 15,
+		attack: 3, 
+		minRange: 1, 
+		maxRange: 5,
 		autoAttack: 0, 
 		attackSpeed: 1000, 
 		currentAnimation: 'standing'

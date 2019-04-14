@@ -43,26 +43,26 @@
 
 .snail-walking {
   width: 45px; 
-  height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
-  background-position: 0 -33px;
+  height: 36px; 
+  background: url('../images/snail.png'); 
+  background-position: 0 -35px;
   animation: snail-walk 1s steps(5) infinite;
 }
 @keyframes snail-walk {
   100% {
-    background-position: -228px -33px;
+    background-position: -228px -35px;
   }
 }
 .snail-hurt {
-  width: 45px; 
-  height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
-  background-position: 0 -33px;
+  width: 50px; 
+  height: 36px; 
+  background: url('../images/snail.png'); 
+  background-position: -5px 66%;
 }
 .snail-dying {
   width: 45px; 
-  height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
+  height: 36px; 
+  background: url('../images/snail.png'); 
   background-position: -5px 100%;
   animation: snail-dying 1s steps(9);
 }

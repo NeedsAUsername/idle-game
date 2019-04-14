@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';  
 import './style.css';
 import Hero from '../hero'; 
-import Enemy from '../enemy'; 
-import MessageBox from '../messageBox';
+import Enemy from '../enemy';  
+import enemies from '../database/enemies';
+import MessageBox from '../messageBox'; 
 import {attack} from '../actions/hero/attack';
 import {levelUp} from '../actions/hero/levelUp'; 
 import {changeEnemy} from '../actions/enemy/change';
@@ -19,14 +20,20 @@ class Game extends React.Component {
     }
   }
 
+  renderEnemiesList = () => (
+    Object.keys(enemies).map(enemyName => 
+      <button onClick={() => this.props.changeEnemy(enemyName)}>{enemyName}</button>
+    )
+  )
+
   render () { 
     return (
       <main className="game">
         <Hero hero={this.props.hero} attack={this.calculateAttack} /> 
         <Enemy enemy={this.props.enemy} changeEnemy={this.props.changeEnemy} />  
-        <div className="enemies-list">
-          <button onClick={() => this.props.changeEnemy('snail')}>Snail</button> 
-          <button onClick={() => this.props.changeEnemy('shroom')}>Shroom</button>
+        <div className="enemies-list"> 
+          <h4>Choose Monster</h4>
+          {this.renderEnemiesList()}
         </div>
         <MessageBox messages={this.props.messages} />
       </main>
