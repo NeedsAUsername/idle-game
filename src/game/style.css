@@ -1,35 +1,27 @@
+.game {
+  display: grid; 
+  max-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-areas: "hero enemy messageBox"
+                        "hero enemy-list messageBox"
+                        "hero enemy-list ."  
+} 
+
+.hero {
+  grid-area: hero;
+} 
+
+.enemy-sprite {
+  grid-area: enemy;
+} 
 
 .enemies-list {
+  grid-area: enemy-list;
   display: flex; 
   flex-direction: column;
 } 
 
-
-
-@supports (display: grid) {
-  .game {
-    display: grid; 
-    max-height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    grid-template-areas: "hero enemy messageBox"
-                         "hero enemy enemy-list"
-                         ". . enemy-list"  
-  } 
-
-  .hero {
-    grid-area: hero;
-  } 
-
-  .enemy-sprite {
-    grid-area: enemy;
-  } 
-
-  .enemyList {
-    grid-area: enemy-list;
-  } 
-
-  .message-box {
-    grid-area: messageBox
-  }
+.message-box {
+  grid-area: messageBox
 }

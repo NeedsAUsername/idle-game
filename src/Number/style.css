@@ -14,6 +14,13 @@
   background-repeat: no-repeat;
   animation: show-damage-numbers .8s ease-out;
 } 
+
+@media only screen and (max-width: 640px) {
+  .damage-numbers {
+    top: 100px;
+  }
+}
+
 @keyframes show-damage-numbers { 
   0% {
     opacity: 1;
