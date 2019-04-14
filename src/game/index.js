@@ -21,8 +21,8 @@ class Game extends React.Component {
   }
 
   renderEnemiesList = () => (
-    Object.keys(enemies).map(enemyName => 
-      <button onClick={() => this.props.changeEnemy(enemyName)}>{enemyName}</button>
+    Object.keys(enemies).map(enemyKey => 
+      <button onClick={() => this.props.changeEnemy(enemyKey)}>{enemies[enemyKey].name}</button>
     )
   )
 

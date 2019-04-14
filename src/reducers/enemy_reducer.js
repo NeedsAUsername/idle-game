@@ -40,7 +40,7 @@ console.log(action)
     }
 
     case 'CHANGE_ENEMY': {
-      let enemyName = action.payload; 
+      let enemyName = action.payload;  
       return enemies[enemyName];
     }
 

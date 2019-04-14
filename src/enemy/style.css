@@ -74,6 +74,73 @@
 }
 
 
+.red-snail-walking {
+  width: 55px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background-position: 10px 20%;
+  animation: red-snail-walk .5s steps(4) infinite;
+}
+@keyframes red-snail-walk {
+  100% {
+    background-position: 117% 20%;
+  }
+} 
+.red-snail-hurt {
+  width: 55px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background-position: 10px 40%;
+}
+.red-snail-dying {
+  width: 60px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background-position: 10px 60%;
+  animation: red-snail-dying 1s steps(3);
+}
+@keyframes red-snail-dying {
+  100% {
+    background-position: 100% 60%;
+    opacity: .25;
+  }
+}
+
+
+.axe-stump-walking {
+  width: 75px; 
+  height: 90px; 
+  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background-position: 5px 28%;
+  animation: axe-stump-walk 1s steps(4) infinite;
+}
+@keyframes axe-stump-walk {
+  100% {
+    background-position: 125% 28%;
+  }
+} 
+.axe-stump-hurt { 
+  width: 75px; 
+  height: 100px; 
+  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background-position: 5px 60%; 
+  
+}
+.axe-stump-dying {
+  width: 75px; 
+  height: 103px; 
+  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background-position: 5px 100%; 
+  animation: axe-stump-dying 1s steps(4) infinite; 
+}
+@keyframes axe-stump-dying {
+  100% {
+    background-position: 125% 100%; 
+    opacity: .25;
+  }
+};  
+
+
 @media only screen and (max-width: 640px) {
   .empty-space {
     margin-top: 120px;
