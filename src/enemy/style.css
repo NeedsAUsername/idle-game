@@ -64,7 +64,7 @@
   height: 40px; 
   background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
   background-position: -5px 100%;
-  animation: snail-dying .8s steps(9);
+  animation: snail-dying 1s steps(9);
 }
 @keyframes snail-dying {
   100% {
