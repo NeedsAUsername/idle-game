@@ -12,8 +12,10 @@ class Game extends React.Component {
 
   calculateAttack = (attack) => { 
     let hero = this.props.hero; 
-    let enemy = this.props.enemy;
-    this.props.attack(attack, enemy, hero);
+    let enemy = this.props.enemy; 
+    if (enemy.currentHp > 0) {
+      this.props.attack(attack, enemy, hero);
+    }
   }
 
   render () { 
