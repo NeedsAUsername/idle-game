@@ -44,6 +44,7 @@ class Enemy extends React.Component {
           <div className="health-bar" style={healthBarStyle}></div> 
         </div>
         <h3>{enemy.name}</h3>
+        <li className="stat">Lvl: {enemy.level}</li>
         <li className="stat">Hp: {enemy.currentHp} / {enemy.totalHp} </li>
       </div>
     )
