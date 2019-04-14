@@ -20,8 +20,7 @@ export function attack(attack, enemy, hero) {
         } else {
           dispatch(defeatsEnemy(enemy))
         } 
-
-        setTimeout(() => dispatch(stopEnemyAnimation()), 1000)
+        setTimeout(() => dispatch(respawnEnemy()), 1000) 
       }
       else {
         setTimeout(() => dispatch(stopEnemyAnimation()), 500)
@@ -48,6 +47,11 @@ function defeatsEnemyAndLevelsUp(enemy) {
   return {
     type: 'DEFEATS_ENEMY_AND_LEVELS_UP', 
     payload: enemy
+  }
+}
+function respawnEnemy() {
+  return {
+    type: 'RESPAWN_ENEMY'
   }
 }
 function stopEnemyAnimation() { 

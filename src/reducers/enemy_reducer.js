@@ -31,6 +31,14 @@ console.log(action)
       }
     } 
 
+    case 'RESPAWN_ENEMY': {
+      return {
+        ...state,  
+        currentHp: state.totalHp, 
+        currentAnimation: state.animations.walking
+      }
+    }
+
     case 'STOP_ENEMY_ANIMATION': 
       if (state.damagesTaken.length > 100) {
         state.damagesTaken = []; // keeps the array from becoming too big
