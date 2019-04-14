@@ -29,7 +29,8 @@ class Enemy extends React.Component {
     this.props.enemy.damagesTaken.map((damage, index) => 
       <Number key={index} number={damage}/>
     )
-  )
+  ) 
+
   render () { 
     
     let enemy = this.props.enemy;  

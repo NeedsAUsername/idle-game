@@ -19,7 +19,6 @@ class Hero extends React.Component {
   } 
 
   
-  
   calculateDamage = () => {
     let hero = this.props.hero;
     return Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange;

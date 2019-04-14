@@ -39,6 +39,11 @@ console.log(action)
       }
     }
 
+    case 'CHANGE_ENEMY': {
+      let enemyName = action.payload; 
+      return enemies[enemyName];
+    }
+
     case 'STOP_ENEMY_ANIMATION': 
       if (state.damagesTaken.length > 100) {
         state.damagesTaken = []; // keeps the array from becoming too big
