@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './style.css'; 
-import Number from '../Number';
+import Number from '../number';
 
 class Enemy extends React.Component {
 

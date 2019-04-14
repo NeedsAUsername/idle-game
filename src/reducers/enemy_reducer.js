@@ -1,18 +1,6 @@
-function heroReducer(state = {
-  name: 'Shroom', 
-  animations: {
-    walking: 'shroom-walking', 
-    hurt: 'shroom-hurt', 
-    dying: 'shroom-dying'
-  }, 
-  currentAnimation: 'shroom-walking',
-  damagesTaken: [], 
-  totalHp: 20,
-  currentHp: 20,  
-  autoAttack: 1, 
-  exp: 10, 
-  mesos: 5
-}, action) {
+import enemies from '../database/enemies'; 
+
+function heroReducer(state = enemies.snail, action) {
 console.log(action) 
 
   switch(action.type) { 

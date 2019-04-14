@@ -16,20 +16,17 @@
   background-position: -9px -20px; 
   animation: shroom-walking 1s steps(4) infinite;
 }
-
 @keyframes shroom-walking {
   100% {
     background-position: 100% -20px;
   }
 }
-
 .shroom-hurt {
   width: 41px; 
   height: 45px;
   background: url('../images/shroom.png'); 
   background-position: -9px -75px; 
 }
-
 .shroom-dying {
   width: 41px; 
   height: 45px; 
@@ -37,12 +34,45 @@
   background-position: -9px -120px; 
   animation: shroom-dying 1s steps(4);
 } 
-
 @keyframes shroom-dying {
   100% {
     background-position: 120% -120px;
   }
 }
+
+
+.snail-walking {
+  width: 45px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
+  background-position: 0 -33px;
+  animation: snail-walk 1s steps(5) infinite;
+}
+@keyframes snail-walk {
+  100% {
+    background-position: -228px -33px;
+  }
+}
+.snail-hurt {
+  width: 45px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
+  background-position: 0 -33px;
+}
+.snail-dying {
+  width: 45px; 
+  height: 40px; 
+  background: url(https://www.spriters-resource.com/resources/sheets/20/22034.png); 
+  background-position: -5px 100%;
+  animation: snail-dying .8s steps(9);
+}
+@keyframes snail-dying {
+  100% {
+    background-position: 114% 100%;
+    opacity: .25;
+  }
+}
+
 
 @media only screen and (max-width: 640px) {
   .empty-space {
