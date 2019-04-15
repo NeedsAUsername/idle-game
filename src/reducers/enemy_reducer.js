@@ -35,7 +35,8 @@ console.log(action)
       return {
         ...state,  
         currentHp: state.totalHp, 
-        currentAnimation: state.animations.walking
+        currentAnimation: state.animations.walking, 
+        damagesTaken: []
       }
     }
 
