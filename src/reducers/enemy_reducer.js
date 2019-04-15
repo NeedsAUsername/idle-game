@@ -26,7 +26,7 @@ console.log(action)
     case 'DEFEATS_ENEMY_AND_LEVELS_UP': {
       return {
         ...state, 
-        currentHp: 0,  // change to 0 after making a spawn new enemy action
+        currentHp: 0, 
         currentAnimation: state.animations.dying
       }
     } 

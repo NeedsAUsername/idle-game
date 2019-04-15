@@ -1,6 +1,5 @@
 import React from 'react'; 
 import './style.css';
-import Enemy from '../enemy';
 
 class Hero extends React.Component { 
   state = {
