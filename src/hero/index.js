@@ -1,23 +1,33 @@
 import React from 'react'; 
 import './style.css';
+import Enemy from '../enemy';
 
 class Hero extends React.Component { 
-
+  state = {
+    readyToAttack: true
+  }
   attackEnemy = (event) => {  
     event.preventDefault()
-    let attackButton = event.target
-    if (event.target.classList.contains('disabled')) {
+    if (this.state.readyToAttack) {
+      this.props.attack({
+        damage: this.calculateDamage()
+      }) 
+    } else {
       return false
     }
-    this.props.attack({
-      damage: this.calculateDamage()
-    }) 
-    attackButton.classList.add('disabled') 
-    setTimeout(function() {
-      attackButton.classList.remove('disabled')
+    this.setState({ readyToAttack: false })
+    setTimeout(() => {
+      this.setState({ readyToAttack: true })
     }, this.props.hero.attackSpeed) 
   } 
 
+  styleAttackButton = () => {
+    if (this.state.readyToAttack && this.props.enemyCurrentHp > 0) {
+      return {opacity: 1}
+    } else {
+      return {opacity: .25}
+    }
+  }
   
   calculateDamage = () => {
     let hero = this.props.hero;
@@ -33,7 +43,7 @@ class Hero extends React.Component {
           <div className={hero.currentAnimation === 'attacking' ? 'star subi' : null}></div>
         </div>
         <ul className="attacks-list"><h3>Attacks</h3> 
-          <li className="button attack" onClick={this.attackEnemy}>Basic Attack</li>
+          <li className="button attack" onClick={this.attackEnemy} style={this.styleAttackButton()}>Basic Attack</li>
         </ul>
 
         <ul className="stat-list"><h3>Character Stats</h3>

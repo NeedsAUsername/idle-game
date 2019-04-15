@@ -29,7 +29,7 @@ class Game extends React.Component {
   render () { 
     return (
       <main className="game">
-        <Hero hero={this.props.hero} attack={this.calculateAttack} /> 
+        <Hero hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} attack={this.calculateAttack} /> 
         <Enemy enemy={this.props.enemy} changeEnemy={this.props.changeEnemy} />  
         <div className="enemies-list"> 
           <h4>Choose Monster</h4>
