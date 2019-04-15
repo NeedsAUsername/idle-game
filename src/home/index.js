@@ -12,6 +12,7 @@ class Home extends React.Component {
         <ul>Dev version 3.00 4/14/2019</ul> 
           <li>Adds multiple monsters, with a list to choose which monster to battle</li> 
           <li>Uses state for attack speed system instead of button disable</li>
+          <li>Performance boost by deleting damage number elements on monster respawn and monster change</li>
           <li>Uses CSS grid for desktop and mobile layout</li>
         <ul>Dev version 2.20 4/7/2019</ul> 
           <li>Adds CSS animations for character, attacking, and damage numbers</li> 
