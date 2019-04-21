@@ -9,6 +9,9 @@ class Home extends React.Component {
         <a href='/game' className="link">Play</a>
         <p>Check out the Github source code <a href="https://github.com/NeedsAUsername/idle-game">here</a></p> 
         <p>Characters from Maplestory</p> 
+        <ul>Dev version 3.10 4/21/2019</ul> 
+          <li>Adds meso loot animation depending on amount dropped</li> 
+          <li>Refactors health-bar into its own component, and stores small components in a components folder</li>
         <ul>Dev version 3.00 4/14/2019</ul> 
           <li>Adds multiple monsters, with a list to choose which monster to battle</li> 
           <li>Uses state for attack speed system instead of button disable</li>
