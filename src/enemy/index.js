@@ -1,8 +1,9 @@
 import React from 'react'; 
 import './style.css'; 
-import Number from '../number';
+import Number from '../number'; 
+import HealthBar from '../healthBar'; 
 
-class Enemy extends React.Component {
+class Enemy extends React.Component { 
 
   getPercentageHealth = () => {
     return this.props.enemy.currentHp/this.props.enemy.totalHp * 100
@@ -40,9 +41,9 @@ class Enemy extends React.Component {
         <div className="empty-space"></div> 
         {this.displayDamageNumbers()}
         <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
-        <div className="health-bar-container">
-          <div className="health-bar" style={healthBarStyle}></div> 
-        </div>
+
+        <HealthBar color={this.getHealthBarColor()} healthRemaining={this.getPercentageHealth() + '%'}/>
+        
         <h3>{enemy.name}</h3>
         <li className="stat">Lvl: {enemy.level}</li>
         <li className="stat">Hp: {enemy.currentHp} / {enemy.totalHp} </li>
