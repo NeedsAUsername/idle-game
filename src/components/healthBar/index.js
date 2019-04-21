@@ -6,7 +6,7 @@ function healthBar (props) {
   let style = {
     height: '100%',
     backgroundColor: props.color, 
-    width: props.healthRemaining
+    width: props.percentageHealth
   };
   return (
     <div className="health-bar-container">

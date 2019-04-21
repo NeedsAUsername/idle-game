@@ -1,7 +1,8 @@
 import React from 'react'; 
 import './style.css'; 
 import Number from '../components/number'; 
-import HealthBar from '../components/healthBar'; 
+import HealthBar from '../components/healthBar';
+import Loot from '../components/loot'; 
 
 class Enemy extends React.Component { 
 
@@ -18,35 +19,24 @@ class Enemy extends React.Component {
     }
   }
 
-  getHealthBarStyle = () => {
-    return {
-      height: '100%',
-      width: this.getPercentageHealth() + '%', 
-      backgroundColor: this.getHealthBarColor()
-    }
-  } 
-
   displayDamageNumbers = () => (
     this.props.enemy.damagesTaken.map((damage, index) => 
       <Number key={index} number={damage}/>
     )
   ) 
+
   
-  displayLoot = () => (
-    <div class="loot coin"></div>
-  )
   render () { 
     
     let enemy = this.props.enemy;  
-    let healthBarStyle = this.getHealthBarStyle();
     return (
       <div className="enemy">
         <div className="empty-space"></div> 
         {this.displayDamageNumbers()} 
-        {this.displayLoot()}
+        {enemy.currentHp === 0 ? <Loot loot="coin" /> : null}
         <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
 
-        <HealthBar color={this.getHealthBarColor()} healthRemaining={this.getPercentageHealth() + '%'}/>
+        <HealthBar color={this.getHealthBarColor()} percentageHealth={this.getPercentageHealth() + '%'}/>
 
         <h3>{enemy.name}</h3>
         <li className="stat">Lvl: {enemy.level}</li>

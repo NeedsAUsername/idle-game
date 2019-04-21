@@ -7,31 +7,6 @@
   } 
 }
 
-.loot { 
-  display: float;
-  float: left;
-}
-.coin {
-  height: 30px; 
-  width: 24px; 
-  
-  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
-  background-position: -5px 0;
-  animation: coin-spin .5s steps(4) infinite, 
-    move-left 2s infinite;
-}
-@keyframes coin-spin {
-  100% {
-    background-position: -100px 0;
-  }
-}
-@keyframes move-left {
-  100% {
-    transform: translateX(-300px); 
-    opacity: .5;
-  }
-}
-
 .shroom-walking {
   width: 41px; 
   height: 45px;
