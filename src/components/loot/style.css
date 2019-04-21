@@ -22,3 +22,50 @@
     opacity: .5;
   }
 }
+
+.gold-coin {
+  height: 30px; 
+  width: 28px; 
+  
+  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png'); 
+  background-position: 0 -26px;
+  animation: gold-coin-spin .5s steps(4) infinite, 
+    move-left 2s infinite;
+}
+@keyframes gold-coin-spin {
+  100% {
+    background-position: -100px -26px;
+  }
+}
+
+
+.meso-bills {
+  height: 30px; 
+  width: 35px; 
+  
+  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
+  background-position: 0px -52px;
+  animation: meso-bills-spin  .5s steps(4) infinite, 
+    move-left 2s infinite;
+}
+@keyframes meso-bills-spin {
+  100% {
+    background-position: -140px -52px;
+  }
+}
+
+
+.meso-bag {
+  height: 30px; 
+  width: 35px; 
+  
+  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
+  background-position: 0px -90px;
+  animation: meso-bag-spin .5s steps(4) infinite, 
+    move-left 2s infinite;
+}
+@keyframes meso-bag-spin {
+  100% {
+    background-position: -140px -90px; 
+  }
+}

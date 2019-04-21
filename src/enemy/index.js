@@ -25,6 +25,18 @@ class Enemy extends React.Component {
     )
   ) 
 
+  calculateLootDrop = () => { 
+    let mesosDropped = this.props.enemy.mesos; 
+    if (mesosDropped < 50) {
+      return 'coin' 
+    } else if (mesosDropped < 100) {
+      return 'gold-coin'
+    } else if (mesosDropped < 1000) {
+      return 'meso-bills'
+    } else {
+      return 'meso-bag'
+    }
+  }
   
   render () { 
     
@@ -33,7 +45,7 @@ class Enemy extends React.Component {
       <div className="enemy">
         <div className="empty-space"></div> 
         {this.displayDamageNumbers()} 
-        {enemy.currentHp === 0 ? <Loot loot="coin" /> : null}
+        {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}
         <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
 
         <HealthBar color={this.getHealthBarColor()} percentageHealth={this.getPercentageHealth() + '%'}/>
