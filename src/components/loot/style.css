@@ -3,13 +3,13 @@
   z-index: 3;
 }
 .coin {
-  height: 30px; 
+  height: 28px; 
   width: 24px; 
   
-  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
+  background: url('../../images/mesos.png');
   background-position: -5px 0;
   animation: coin-spin .5s steps(4) 4, 
-    move-left 2s;
+    move-left 2s forwards;
 }
 @keyframes coin-spin {
   100% {
@@ -18,8 +18,8 @@
 }
 @keyframes move-left {
   100% {
-    transform: translateX(-300px); 
-    opacity: .5;
+    transform: translateX(-350px); 
+    opacity: .25;
   }
 }
 
@@ -27,7 +27,7 @@
   height: 30px; 
   width: 28px; 
   
-  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png'); 
+  background: url('../../images/mesos.png'); 
   background-position: 0 -26px;
   animation: gold-coin-spin .5s steps(4) infinite, 
     move-left 2s infinite;
@@ -43,7 +43,7 @@
   height: 30px; 
   width: 35px; 
   
-  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
+  background: url('../../images/mesos.png');
   background-position: 0px -52px;
   animation: meso-bills-spin  .5s steps(4) infinite, 
     move-left 2s infinite;
@@ -59,7 +59,7 @@
   height: 30px; 
   width: 35px; 
   
-  background: url('https://www.spriters-resource.com/resources/sheets/15/16158.png');
+  background: url('../../images/mesos.png');
   background-position: 0px -90px;
   animation: meso-bag-spin .5s steps(4) infinite, 
     move-left 2s infinite;
