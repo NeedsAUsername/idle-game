@@ -8,8 +8,8 @@
   
   background: url('../../images/mesos.png');
   background-position: -5px 0;
-  animation: coin-spin .5s steps(4) 4, 
-    move-left 2s forwards;
+  animation: coin-spin .5s steps(4) 2, 
+    move-left 1s ease-out;
 }
 @keyframes coin-spin {
   100% {
