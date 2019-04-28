@@ -20,9 +20,9 @@ class Enemy extends React.Component {
   }
 
   displayDamageNumbers = () => (
-    this.props.enemy.damagesTaken.map((damage, index) => 
-      <Number key={index} number={damage}/>
-    )
+    this.props.enemy.damagesTaken.map((damageArray) => {
+      return damageArray.map((damage, index) => <Number position={index} key={index} number={damage}/>)
+    })
   ) 
 
   calculateLootDrop = () => { 
@@ -39,7 +39,6 @@ class Enemy extends React.Component {
   }
   
   render () { 
-    
     let enemy = this.props.enemy;  
     return (
       <div className="enemy">

@@ -13,6 +13,7 @@ export function attack(attack, enemy, hero) {
     setTimeout(function() { 
       let totalDamage = attack.damageArray.reduce((acc, dmg) => acc + dmg);
       dispatch(enemyTakesDamage(attack.damageArray, totalDamage)) 
+      
       if (enemy.currentHp <= totalDamage) { 
         if ((hero.exp + enemy.exp) >= hero.expToLevelUp) { 
           dispatch(defeatsEnemyAndLevelsUp(enemy))

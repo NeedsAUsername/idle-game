@@ -7,10 +7,11 @@
 }
 .damage-number { 
   opacity: 0;
-  width: 55px;
+  width: 50px;
   height: 65px;
   margin-left: -20px;
   float: left;
+  background-size: contain;
   background-repeat: no-repeat;
   animation: show-damage-numbers .8s ease-out;
 } 
@@ -27,7 +28,7 @@
   }
   100% {
     opacity: 1;
-    transform: translateY(-50px)
+    transform: translateY(-20px)
   } 
 }
 .damage-0 {

@@ -14,7 +14,7 @@ console.log(action)
         ...state, 
         currentHp: hpAfterDamage, 
         currentAnimation: state.animations.hurt, 
-        damagesTaken: [...state.damagesTaken, ...attackArray]
+        damagesTaken: [...state.damagesTaken, attackArray]
       }
 
     case 'DEFEATS_ENEMY': 
