@@ -5,8 +5,8 @@ console.log(action)
 
   switch(action.type) { 
     case 'ENEMY_TAKES_DAMAGE':  
-      let attack = action.payload;
-      let hpAfterDamage = state.currentHp - attack.damage; 
+      let {attackArray, totalDamage} = action.payload;
+      let hpAfterDamage = state.currentHp - totalDamage; 
       if (hpAfterDamage < 0) {
         hpAfterDamage = 0;
       } 
@@ -14,7 +14,7 @@ console.log(action)
         ...state, 
         currentHp: hpAfterDamage, 
         currentAnimation: state.animations.hurt, 
-        damagesTaken: [...state.damagesTaken, attack.damage]
+        damagesTaken: [...state.damagesTaken, ...attackArray]
       }
 
     case 'DEFEATS_ENEMY': 

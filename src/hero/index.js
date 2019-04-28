@@ -5,11 +5,11 @@ class Hero extends React.Component {
   state = {
     readyToAttack: true
   }
-  attackEnemy = (event) => {  
+  attackEnemy = (event, attack) => {  
     event.preventDefault()
     if (this.state.readyToAttack) {
       this.props.attack({
-        damage: this.calculateDamage()
+        damageArray: this.calculateDamageArray(attack)
       }) 
     } else {
       return false
@@ -28,17 +28,23 @@ class Hero extends React.Component {
     }
   }
   
-  calculateDamage = () => {
+  calculateDamageArray = (attack) => {
     let hero = this.props.hero;
-    return Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange;
+    let damageArray = []; 
+    for (let i = 0; i < attack.hits; i++) {
+      let baseDamage = Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange; 
+      damageArray.push(Math.floor(baseDamage * attack.damageMultiplier))
+    }
+    return damageArray;
   }
 
   renderAttackList = () => {
     let hero = this.props.hero; 
     let heroAttackKeys = Object.keys(hero.attacks)
-    return heroAttackKeys.map(attackKey => (
-      <div><li className="button attack" onClick={this.attackEnemy} style={this.styleAttackButton()}>{hero.attacks[attackKey].name}</li></div>
-    ))
+    return heroAttackKeys.map(attackKey => {
+      let attack = hero.attacks[attackKey]; 
+      return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)} style={this.styleAttackButton()}>{attack.name}</li></div>
+    })
   }
   render () { 
     let hero = this.props.hero; 
@@ -51,7 +57,6 @@ class Hero extends React.Component {
         </div>
         <ul className="attacks-list"><h3>Attacks</h3> 
           {this.renderAttackList()}
-          <li className="button attack" onClick={this.attackEnemy} style={this.styleAttackButton()}>Basic Attack</li>
         </ul>
 
         <ul className="stat-list"><h3>Character Stats</h3>

@@ -11,10 +11,9 @@ export function attack(attack, enemy, hero) {
       type: 'HERO_ATTACKS'
     }) 
     setTimeout(function() { 
-      dispatch(enemyTakesDamage(attack)) 
-
-      if (enemy.currentHp <= attack.damage) { 
-
+      let totalDamage = attack.damageArray.reduce((acc, dmg) => acc + dmg);
+      dispatch(enemyTakesDamage(attack.damageArray, totalDamage)) 
+      if (enemy.currentHp <= totalDamage) { 
         if ((hero.exp + enemy.exp) >= hero.expToLevelUp) { 
           dispatch(defeatsEnemyAndLevelsUp(enemy))
         } else {
@@ -31,10 +30,10 @@ export function attack(attack, enemy, hero) {
   }
 }  
 
-function enemyTakesDamage(attack) {
+function enemyTakesDamage(attackArray, totalDamage) {
   return {
     type: 'ENEMY_TAKES_DAMAGE', 
-    payload: attack
+    payload: {attackArray, totalDamage}
   }
 }
 function defeatsEnemy(enemy) {

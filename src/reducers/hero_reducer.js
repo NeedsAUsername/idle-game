@@ -16,6 +16,7 @@ function heroReducer(state = {
 		autoAttack: 0, 
 		attackSpeed: 1000, 
 		currentAnimation: 'standing', 
+		currentAttack: '',
 		attacks: attacks
 }, action) {
 	console.log(action) 
