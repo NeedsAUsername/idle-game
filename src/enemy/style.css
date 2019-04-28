@@ -1,17 +1,13 @@
-.empty-space {
-  margin-top: 240px;
-}
-@media only screen and (max-width: 640px) {
-  .empty-space {
-    margin-top: 120px;
-  } 
-} 
-
 .enemy-sprite-container {
   height: 300px;
   display: flex; 
   flex-direction: row; 
   align-items: flex-end;
+}
+@media only screen and (max-width: 640px) {
+  .enemy-sprite-container {
+    height: 175px;
+  }
 }
 
 .shroom-walking {
