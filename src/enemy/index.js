@@ -42,11 +42,11 @@ class Enemy extends React.Component {
     let enemy = this.props.enemy;  
     return (
       <div className="enemy">
-        <div className="empty-space"></div> 
         {this.displayDamageNumbers()} 
         {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}
-        <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
-
+        <div className="enemy-sprite-container">
+          <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
+        </div>
         <HealthBar color={this.getHealthBarColor()} percentageHealth={this.getPercentageHealth() + '%'}/>
 
         <h3>{enemy.name}</h3>
