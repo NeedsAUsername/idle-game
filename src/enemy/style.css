@@ -75,7 +75,7 @@
 .red-snail-walking {
   width: 55px; 
   height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background: url('../images/monsters/red-snail.png'); 
   background-position: 10px 20%;
   animation: red-snail-walk .5s steps(4) infinite;
 }
@@ -87,13 +87,13 @@
 .red-snail-hurt {
   width: 55px; 
   height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background: url('../images/monsters/red-snail.png'); 
   background-position: 10px 40%;
 }
 .red-snail-dying {
   width: 60px; 
   height: 40px; 
-  background: url(https://www.spriters-resource.com/resources/sheets/20/22046.png); 
+  background: url('../images/monsters/red-snail.png'); 
   background-position: 10px 60%;
   animation: red-snail-dying 1s steps(3);
 }
@@ -108,7 +108,7 @@
 .axe-stump-walking {
   width: 75px; 
   height: 90px; 
-  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background: url('../images/monsters/axe-stump.png'); 
   background-position: 5px 28%;
   animation: axe-stump-walk 1s steps(4) infinite;
 }
@@ -120,13 +120,13 @@
 .axe-stump-hurt { 
   width: 75px; 
   height: 100px; 
-  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background: url('../images/monsters/axe-stump.png'); 
   background-position: 5px 60%; 
 }
 .axe-stump-dying {
   width: 75px; 
   height: 103px; 
-  background: url('https://www.spriters-resource.com/resources/sheets/20/22083.png'); 
+  background: url('../images/monsters/axe-stump.png'); 
   background-position: 5px 100%; 
   animation: axe-stump-dying 1s steps(4) infinite; 
 }
