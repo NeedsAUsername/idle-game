@@ -12,6 +12,7 @@ class Home extends React.Component {
         <ul>Dev version 4.00 4/28/2019</ul>
           <li>Adds multiple attacks for the hero, which required structural changes to the way damage and attack speed is calculated, 
             and how the damage numbers are output</li> 
+          <li>Adds octopus, stone golem, red drake, king slime</li>
           <li>Uses flex-end property to keep all monsters rooted to the same bottom starting position</li>
         <ul>Dev version 3.10 4/21/2019</ul> 
           <li>Adds meso loot animation depending on amount dropped</li> 
