@@ -107,6 +107,36 @@
   }
 }
 
+.octopus-walking {
+  width: 90px; 
+  height: 80px; 
+  background: url('../images/monsters/octopus.png');  
+  animation: octopus-walking 1s steps(5) infinite;
+} 
+@keyframes octopus-walking {
+  100% {
+    background-position: 96.5% 0;
+  }
+}
+.octopus-hurt {
+  width: 90px; 
+  height: 80px; 
+  background: url('../images/monsters/octopus.png');  
+  background-position: 0 54%;
+}
+.octopus-dying {
+  width: 90px; 
+  height: 80px; 
+  background: url('../images/monsters/octopus.png');  
+  background-position: 0 100%;
+  animation: octopus-dying 1s steps(4) infinite;
+} 
+@keyframes octopus-dying {
+  100% {
+    background-position: 75% 100%;
+  }
+}
+
 
 .axe-stump-walking {
   width: 75px; 
@@ -140,3 +170,98 @@
   }
 }
 
+
+.stone-golem-walking {
+  width: 200px; 
+  height: 165px; 
+  background: url('../images/monsters/stone-golem.png'); 
+  animation: golem-walking 1s steps(3) infinite;
+}
+@keyframes golem-walking {
+  100% {
+    background-position: -605px 0;
+  }
+} 
+.stone-golem-hurt {
+  width: 300px; 
+  height: 165px; 
+  background: url('../images/monsters/stone-golem.png'); 
+  background-position: -20px 48%; 
+}
+.stone-golem-dying {
+  width: 200px; 
+  height: 165px; 
+  background: url('../images/monsters/stone-golem.png');
+  background-position: 0 100%;
+  animation: golem-dying 1s steps(7) infinite;
+}
+@keyframes golem-dying {
+  100% {
+    background-position: -1700px 100%;
+  }
+}
+
+
+.red-drake-walking {
+  width: 140px;  
+  height: 100px;
+  background: url('../images/monsters/red-drake.png'); 
+  background-position: 0 -100px;
+  animation: red-drake-walking 1s steps(4) infinite;
+}
+@keyframes red-drake-walking {
+  100% {
+    background-position: -570px -100px;
+  }
+}
+.red-drake-hurt {
+  width: 140px;  
+  height: 125px;
+  background: url('../images/monsters/red-drake.png'); 
+  background-position: 20px -190px;
+}
+.red-drake-dying {
+  width: 160px;  
+  height: 100px;
+  background: url('../images/monsters/red-drake.png'); 
+  background-position: 0 100%;
+  animation: red-drake-dying 1s steps(8) infinite;
+}
+
+@keyframes red-drake-dying {
+  100% {
+    background-position: 110% 100%;
+  }
+} 
+
+
+.king-slime-walking { 
+  width: 250px; 
+  height: 250px;
+  background: url('../images/monsters/king-slime.png');  
+  background-position: 8px -250px;
+  animation: king-slime-walking 1.5s steps(7) infinite;
+}
+@keyframes king-slime-walking {
+  100% {
+    background-position: 60% -250px;
+  }
+} 
+.king-slime-hurt {
+  width: 250px; 
+  height: 250px; 
+  background: url('../images/monsters/king-slime.png');  
+  background-position: 0 -500px;
+}
+.king-slime-dying { 
+  width: 250px; 
+  height: 250px; 
+  background: url('../images/monsters/king-slime.png');  
+  background-position: 0 -500px;
+  animation: king-slime-dying 1s steps(9) infinite;
+}
+@keyframes king-slime-dying {
+  100% {
+    background-position: 78% -500px;
+  }
+}
