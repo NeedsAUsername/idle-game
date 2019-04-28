@@ -36,36 +36,6 @@
   }
 }
 
-.quad-throw { 
-  float: left; 
-  position: absolute; 
-  top: 50px; 
-  left: 100px;
-  width: 500px;
-  height: 300px;
-  transform: scaleX(-1); 
-  z-index: 4; 
-  opacity: .85;
-  background: url('../images/attacks/quad-throw.gif');
-  background-size: cover;
-  background-repeat: no-repeat;  
-} 
-
-
-.grim-reaper {
-  position: absolute; 
-  top: 50px; 
-  left: 300px; 
-  width: 400px;
-  height: 300px;
-  transform: scaleX(-1); 
-  z-index: 4; 
-  opacity: .85;
-  background: url('../images/attacks/grim-reaper.gif');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .attacking {
   width: 65px; 
   height: 70px; 
@@ -107,6 +77,35 @@
   }
 }
 
+
+.quad-throw { 
+  float: left; 
+  position: absolute; 
+  top: 50px; 
+  left: 100px;
+  width: 500px;
+  height: 300px;
+  transform: scaleX(-1); 
+  z-index: 4; 
+  opacity: .85;
+  background: url('../images/attacks/quad-throw.gif');
+  background-size: cover;
+  background-repeat: no-repeat;  
+} 
+
+.grim-reaper {
+  position: absolute; 
+  top: 50px; 
+  left: 300px; 
+  width: 400px;
+  height: 300px;
+  transform: scaleX(-1); 
+  z-index: 4; 
+  opacity: .85;
+  background: url('../images/attacks/grim-reaper.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+} 
 
 @media only screen and (max-width: 640px) {
   .hero {

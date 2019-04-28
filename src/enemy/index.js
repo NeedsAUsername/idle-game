@@ -43,9 +43,9 @@ class Enemy extends React.Component {
     return (
       <div className="enemy">
         {this.displayDamageNumbers()} 
-        {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}
         <div className="enemy-sprite-container">
           <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
+          {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}
         </div>
         <HealthBar color={this.getHealthBarColor()} percentageHealth={this.getPercentageHealth() + '%'}/>
 
