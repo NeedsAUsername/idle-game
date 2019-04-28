@@ -1,3 +1,5 @@
+import attacks from '../database/attacks.js';
+
 function heroReducer(state = {
 		name: 'Theif 1st Class: Rogue', 
 		totalHp: 100,
@@ -13,7 +15,8 @@ function heroReducer(state = {
 		maxRange: 5,
 		autoAttack: 0, 
 		attackSpeed: 1000, 
-		currentAnimation: 'standing'
+		currentAnimation: 'standing', 
+		attacks: attacks
 }, action) {
 	console.log(action) 
 

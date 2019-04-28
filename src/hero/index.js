@@ -32,6 +32,14 @@ class Hero extends React.Component {
     let hero = this.props.hero;
     return Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange;
   }
+
+  renderAttackList = () => {
+    let hero = this.props.hero; 
+    let heroAttackKeys = Object.keys(hero.attacks)
+    return heroAttackKeys.map(attackKey => (
+      <div><li className="button attack" onClick={this.attackEnemy} style={this.styleAttackButton()}>{hero.attacks[attackKey].name}</li></div>
+    ))
+  }
   render () { 
     let hero = this.props.hero; 
     return (
@@ -42,6 +50,7 @@ class Hero extends React.Component {
           <div className={hero.currentAnimation === 'attacking' ? 'star subi' : null}></div>
         </div>
         <ul className="attacks-list"><h3>Attacks</h3> 
+          {this.renderAttackList()}
           <li className="button attack" onClick={this.attackEnemy} style={this.styleAttackButton()}>Basic Attack</li>
         </ul>
 
