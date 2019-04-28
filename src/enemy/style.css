@@ -110,7 +110,7 @@
 
 .axe-stump-walking {
   width: 75px; 
-  height: 90px; 
+  height: 80px; 
   background: url('../images/monsters/axe-stump.png'); 
   background-position: 5px 28%;
   animation: axe-stump-walk 1s steps(4) infinite;
