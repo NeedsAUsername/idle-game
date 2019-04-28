@@ -34,7 +34,7 @@ class Hero extends React.Component {
     let damageArray = []; 
     for (let i = 0; i < attack.hits; i++) {
       let baseDamage = Math.floor(Math.random() * (hero.maxRange - hero.minRange + 1)) + hero.minRange; 
-      damageArray.push(Math.floor(baseDamage * attack.damageMultiplier))
+      damageArray.push(Math.ceil(baseDamage * attack.damageMultiplier))
     }
     return damageArray;
   }
