@@ -20,7 +20,23 @@ const attacks = {
     className: 'grim-reaper', 
     requiredLevel: 5, 
     damageMultiplier: .4, 
-    hits: 6, 
+    hits: 5, 
+    animationTime: 2200
+  }, 
+  burningBreaker: {
+    name: 'Burning Breaker', 
+    className: 'burning-breaker', 
+    requiredLevel: 10, 
+    damageMultiplier: .3, 
+    hits: 5, 
+    animationTime: 1500
+  }, 
+  demonLordSecretScroll: {
+    name: "Demon Lord's Secret Scroll", 
+    className: 'demon-lord-secret-scroll', 
+    requiredLevel: 15, 
+    damageMultiplier: 4, 
+    hits: 1, 
     animationTime: 1200
   }
 }

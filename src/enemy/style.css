@@ -1,5 +1,5 @@
 .enemy-sprite-container {
-  height: 300px;
+  height: 280px;
   display: flex; 
   flex-direction: row; 
   align-items: flex-end;

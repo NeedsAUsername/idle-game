@@ -21,7 +21,11 @@
   flex-direction: row; 
   width: 300px;
 }
-
+@media only screen and (min-width: 640px) {
+  .hero-sprite-container {
+    margin-left: 100px;
+  }
+}
 
 .standing {
   width: 50px; 
@@ -82,7 +86,7 @@
   float: left; 
   position: absolute; 
   top: 50px; 
-  left: 100px;
+  left: 150px;
   width: 500px;
   height: 300px;
   transform: scaleX(-1); 
@@ -96,7 +100,7 @@
 .grim-reaper {
   position: absolute; 
   top: 50px; 
-  left: 300px; 
+  left: 400px; 
   width: 400px;
   height: 300px;
   transform: scaleX(-1); 
@@ -106,6 +110,32 @@
   background-size: contain;
   background-repeat: no-repeat;
 } 
+
+.burning-breaker {
+  position: absolute; 
+  top: 130px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/burning-breaker.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+} 
+
+.demon-lord-secret-scroll {
+  position: absolute; 
+  top: 130px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/demon-lord-secret-scroll.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 @media only screen and (max-width: 640px) {
   .hero {
