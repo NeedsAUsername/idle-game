@@ -18,7 +18,7 @@ class Hero extends React.Component {
     this.setState({ readyToAttack: false })
     setTimeout(() => {
       this.setState({ readyToAttack: true })
-    }, this.props.hero.attackSpeed) 
+    }, this.props.hero.attackSpeed + attack.animationTime) 
   } 
 
   styleAttackButton = () => {

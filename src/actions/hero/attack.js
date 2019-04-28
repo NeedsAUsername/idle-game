@@ -28,7 +28,7 @@ export function attack(attack, enemy, hero) {
       }  
 
       dispatch(stopHeroAnimation())
-    }, 500) 
+    }, attack.animationTime) 
   }
 }  
 
