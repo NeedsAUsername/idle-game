@@ -9,6 +9,7 @@ class Hero extends React.Component {
     event.preventDefault()
     if (this.state.readyToAttack) {
       this.props.attack({
+        ...attack,
         damageArray: this.calculateDamageArray(attack)
       }) 
     } else {
@@ -53,7 +54,7 @@ class Hero extends React.Component {
         <h2>{hero.name} </h2> 
         <div className="hero-sprite-container">
           <div className={hero.currentAnimation}></div>
-          <div className={hero.currentAnimation === 'attacking' ? 'star subi' : null}></div>
+          <div className={!!hero.currentAttack ? hero.currentAttack.className : null}></div>
         </div>
         <ul className="attacks-list"><h3>Attacks</h3> 
           {this.renderAttackList()}

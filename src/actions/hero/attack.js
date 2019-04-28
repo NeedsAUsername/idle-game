@@ -8,7 +8,8 @@
 export function attack(attack, enemy, hero) {
   return (dispatch) => { 
     dispatch({
-      type: 'HERO_ATTACKS'
+      type: 'HERO_ATTACKS', 
+      payload: attack
     }) 
     setTimeout(function() { 
       let totalDamage = attack.damageArray.reduce((acc, dmg) => acc + dmg);

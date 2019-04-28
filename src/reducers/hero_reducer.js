@@ -23,15 +23,19 @@ function heroReducer(state = {
 
 	switch(action.type) {
 		case 'HERO_ATTACKS': 
+			let attack = action.payload 
+			console.log('attack', attack)
 			return {
 				...state, 
-				currentAnimation: 'attacking'
+				currentAnimation: 'attacking', 
+				currentAttack: attack
 			}
 
 		case 'STOP_HERO_ANIMATION': 
 			return {
 				...state, 
-				currentAnimation: 'standing'
+				currentAnimation: 'standing', 
+				currentAttack: ''
 			}
 
 		case 'DEFEATS_ENEMY':  
