@@ -9,6 +9,9 @@ class Home extends React.Component {
         <a href='/game' className="link">Play</a>
         <p>Check out the Github source code <a href="https://github.com/NeedsAUsername/idle-game">here</a></p> 
         <p>Characters from Maplestory</p> 
+        <ul>Dev version 4.00 4/28/2019</ul>
+          <li>Adds multiple attacks for the hero, which required structural changes to the way damage and attack speed is calculated, 
+            and how the damage numbers are output</li> 
         <ul>Dev version 3.10 4/21/2019</ul> 
           <li>Adds meso loot animation depending on amount dropped</li> 
           <li>Refactors health-bar into its own component, and stores small components in a components folder</li>
