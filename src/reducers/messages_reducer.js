@@ -7,14 +7,16 @@ console.log(action)
     state.shift()
   }
   switch(action.type) {
+    case 'SEND_MESSAGE':
+      return [...state, action.payload]
+
     case 'DEFEATS_ENEMY':   
       let enemy = action.payload;
-      state.push(`you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.mesos} mesos`) 
-      return state
+      return [...state, `you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.mesos} mesos`]
     
-    case 'LEVEL_UP': 
-      state.push('You have leveled up!') 
-      return state
+    case 'DEFEATS_ENEMY_AND_LEVELS_UP': 
+      enemy = action.payload;
+      return [...state, `you defeated ${enemy.name}, and gained ${enemy.exp} exp and ${enemy.mesos} mesos`, `you leveled up! 🎉`]
     
     default: 
       return state

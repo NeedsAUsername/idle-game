@@ -7,8 +7,13 @@ class Hero extends React.Component {
   }
   attackEnemy = (event, attack) => {  
     event.preventDefault()
+    let hero = this.props.hero
+    if (hero.currentMp < attack.mpCost) {
+      let error = 'you do not have enough mp for ' + attack.name
+      return this.props.calculateAttack(undefined, undefined, error)
+    }
     if (this.state.readyToAttack) {
-      this.props.attack({
+      this.props.calculateAttack(hero, {
         ...attack,
         damageArray: this.calculateDamageArray(attack)
       }) 

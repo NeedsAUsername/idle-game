@@ -8,12 +8,15 @@ import MessageBox from '../messageBox';
 import {attack} from '../actions/hero/attack';
 import {levelUp} from '../actions/hero/levelUp'; 
 import {changeEnemy} from '../actions/enemy/change';
+import {sendMessage} from '../actions/messageBox/sendMessage';
 
 
 class Game extends React.Component { 
 
-  calculateAttack = (attack) => { 
-    let hero = this.props.hero; 
+  calculateAttack = (hero, attack, err) => {
+    if (err) {
+      return this.props.sendMessage(err);
+    }
     let enemy = this.props.enemy; 
     if (enemy.currentHp > 0) {
       this.props.attack(attack, enemy, hero);
@@ -29,7 +32,7 @@ class Game extends React.Component {
   render () { 
     return (
       <main className="game">
-        <Hero hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} attack={this.calculateAttack} /> 
+        <Hero hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack} /> 
         <Enemy enemy={this.props.enemy} changeEnemy={this.props.changeEnemy} />  
         <div className="enemies-list"> 
           <h4>Choose Monster</h4>
@@ -49,4 +52,4 @@ const mapStateToProps = (store) => {
   }
 }
 
-export default connect(mapStateToProps, {attack, levelUp, changeEnemy})(Game);
+export default connect(mapStateToProps, {attack, levelUp, changeEnemy, sendMessage})(Game);

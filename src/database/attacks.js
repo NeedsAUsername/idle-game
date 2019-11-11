@@ -5,7 +5,8 @@ const attacks = {
     requiredLevel: 1, 
     damageMultiplier: 1, 
     hits: 1, 
-    animationTime: 500
+    animationTime: 500,
+    mpCost: 0,
   },
   quadThrow: {
     name: 'Quad Throw',
@@ -13,7 +14,8 @@ const attacks = {
     requiredLevel: 2, 
     damageMultiplier: .5, 
     hits: 4, 
-    animationTime: 1000
+    animationTime: 1000,
+    mpCost: 10,
   }, 
   grimReaper: {
     name: 'Grim Reaper',
@@ -21,7 +23,8 @@ const attacks = {
     requiredLevel: 5, 
     damageMultiplier: .4, 
     hits: 5, 
-    animationTime: 2200
+    animationTime: 2200,
+    mpCost: 20,
   }, 
   burningBreaker: {
     name: 'Burning Breaker', 
@@ -29,7 +32,8 @@ const attacks = {
     requiredLevel: 10, 
     damageMultiplier: .3, 
     hits: 5, 
-    animationTime: 1500
+    animationTime: 1500,
+    mpCost: 30,
   }, 
   demonLordSecretScroll: {
     name: "Demon Lord's Secret Scroll", 
@@ -37,7 +41,8 @@ const attacks = {
     requiredLevel: 15, 
     damageMultiplier: 4, 
     hits: 1, 
-    animationTime: 1200
+    animationTime: 1200,
+    mpCost: 40,
   }
 }
 

@@ -24,9 +24,9 @@ function heroReducer(state = {
 	switch(action.type) {
 		case 'HERO_ATTACKS': 
 			let attack = action.payload 
-			console.log('attack', attack)
 			return {
-				...state, 
+        ...state, 
+        currentMp: state.currentMp - attack.mpCost, 
 				currentAnimation: 'attacking', 
 				currentAttack: attack
 			}
@@ -47,12 +47,16 @@ function heroReducer(state = {
 				mesos: state.mesos + enemy.mesos
 			}
 
-		case 'DEFEATS_ENEMY_AND_LEVELS_UP': 
+    case 'DEFEATS_ENEMY_AND_LEVELS_UP': 
+      let newTotalHp = state.totalHp + 10
+      let newTotalMp = state.totalMp + 5
 			return {
 				...state, 
 				level: state.level + 1, 
-				hp: state.hp + 10, 
-				mp: state.map + 5, 
+				totalHp: newTotalHp, 
+        totalMp: newTotalMp, 
+        currentHp: newTotalHp,
+        currentMp: newTotalMp,
 				attack: state.attack + 1, 
 				minRange: state.minRange + 1, 
 				maxRange: state.maxRange + 1,
