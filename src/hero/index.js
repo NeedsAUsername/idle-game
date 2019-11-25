@@ -7,7 +7,7 @@ class Hero extends React.Component {
     readyToAttack: true
   }
   componentDidMount() {
-    this.interval = setInterval(this.recoverMp, 2000);
+    this.interval = setInterval(this.recoverMp, 1000);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
@@ -18,11 +18,14 @@ class Hero extends React.Component {
       this.props.recoverMp(hero.mpRecovery);
     }
   }
-  getPercentageHp = () => {
+  getPercentageHp= () => {
     return this.props.hero.currentHp/this.props.hero.totalHp * 100
   }
   getPercentageMp = () => {
     return this.props.hero.currentMp/this.props.hero.totalMp * 100
+  }
+  getPercentageExp = () => {
+    return this.props.hero.exp/this.props.hero.expToLevelUp * 100
   }
   attackEnemy = (event, attack) => {  
     event.preventDefault()
@@ -75,23 +78,26 @@ class Hero extends React.Component {
     let hero = this.props.hero; 
     return (
       <div className="hero">  
-        <h2>{hero.name} </h2> 
+        <h2>Maple Idle</h2> 
         <div className="hero-sprite-container">
           <div className={hero.currentAnimation}></div>
           <div className={!!hero.currentAttack ? hero.currentAttack.className : null}></div>
         </div>
+        <ul className="resource-list">
+        <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
+        <Bar color="orange" percentageFull={this.getPercentageHp() + '%'} />
+        <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
+        <Bar color="blue" percentageFull={this.getPercentageMp() + '%'}/>
+        <li className="stat">Exp: {hero.exp} / {hero.expToLevelUp}</li> 
+        <Bar color="grey" percentageFull={this.getPercentageExp() + '%'}/>
+        </ul>
         <ul className="attacks-list"><h3>Attacks</h3> 
           {this.renderAttackList()}
         </ul>
 
         <ul className="stat-list"><h3>Character Stats</h3>
           <li className="stat">Level: {hero.level}</li>
-          <li className="stat">Exp: {hero.exp} / {hero.expToLevelUp}</li> 
           <li className="stat">Mesos: {hero.mesos}</li>
-          <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
-          <li className="stat"><Bar color="green" percentageFull={this.getPercentageHp() + '%'} /></li>
-          <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
-          <li className="stat"><Bar color="purple" percentageFull={this.getPercentageMp() + '%'}/></li>
           <li className="stat">Range: {hero.minRange} ~ {hero.maxRange}</li>
           <li className="stat">Auto-attack: {hero.autoAttack}</li> 
           <li className="stat">Attack Speed: {hero.attackSpeed / 1000} second</li>

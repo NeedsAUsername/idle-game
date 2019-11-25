@@ -39,10 +39,10 @@ class Enemy extends React.Component {
   }
   
   render () { 
-    let enemy = this.props.enemy;  
+    let enemy = this.props.enemy;
     return (
       <div className="enemy">
-        {this.displayDamageNumbers()} 
+        {this.displayDamageNumbers()}
         <div className="enemy-sprite-container">
           <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
           {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}

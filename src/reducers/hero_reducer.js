@@ -1,7 +1,7 @@
 import attacks from '../database/attacks.js';
 
 function heroReducer(state = {
-		name: 'Theif 1st Class: Rogue', 
+		name: 'Beginner Rogue', 
 		totalHp: 100,
 		currentHp: 100,
 		totalMp: 100, 
