@@ -3,9 +3,9 @@
   max-height: 100vh;
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr; 
-  grid-template-areas: "hero enemy messageBox"
+  grid-template-areas: "hero enemy playerActions"
                         "hero enemy-list messageBox"
-                        "hero enemy-list ."  
+                        "hero enemy-list messageBox"  
 } 
 
 .hero {
@@ -23,5 +23,10 @@
 } 
 
 .message-box {
-  grid-area: messageBox
+  grid-area: messageBox;
+}
+
+.player-actions {
+  grid-area: playerActions;
+  margin-bottom: 0px;
 }

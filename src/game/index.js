@@ -4,6 +4,7 @@ import './style.css';
 import Hero from '../hero'; 
 import Enemy from '../enemy';  
 import enemies from '../database/enemies';
+import PlayerActions from '../playerActions';
 import MessageBox from '../messageBox'; 
 import {recoverMp} from '../actions/hero/recoverMp';
 import {attack} from '../actions/hero/attack';
@@ -33,12 +34,13 @@ class Game extends React.Component {
   render () { 
     return (
       <main className="game">
-        <Hero hero={this.props.hero} recoverMp={this.props.recoverMp} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack} /> 
+        <Hero hero={this.props.hero} recoverMp={this.props.recoverMp} /> 
         <Enemy enemy={this.props.enemy} changeEnemy={this.props.changeEnemy} />  
         <div className="enemies-list"> 
           <h4>Choose Monster</h4>
           {this.renderEnemiesList()}
         </div>
+        <PlayerActions hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack}/>
         <MessageBox messages={this.props.messages} />
       </main>
     )

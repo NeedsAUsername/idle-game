@@ -3,7 +3,7 @@ function messagesReducer(state = [
 ], action) {
 console.log(action) 
 
-  if (state.length > 10) {
+  if (state.length > 5) {
     state.shift()
   }
   switch(action.type) {
