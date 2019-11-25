@@ -9,6 +9,9 @@ class Home extends React.Component {
         <a href='/game' className="link">Play</a>
         <p>Check out the Github source code <a href="https://github.com/NeedsAUsername/idle-game">here</a></p> 
         <p>Characters from Maplestory</p> 
+        <ul>Dev version 5.10 11/25/2019</ul>
+          <li>Adds mana recovery system, exports player actions out of hero component</li>
+          <li>Visual revamp: adds bars for hp/mp/exp, level up animation, and changes layout of the page </li>
         <ul>Dev version 5.00 11/11/2019</ul>
           <li>Implements mana cost system</li>
           <li>Bug fixes on level up message not showing, and not updating total hp/mp on level up</li>
