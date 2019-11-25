@@ -5,6 +5,18 @@ class Hero extends React.Component {
   state = {
     readyToAttack: true
   }
+  componentDidMount() {
+    this.interval = setInterval(this.recoverMp, 2000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  recoverMp = () => {
+    let hero = this.props.hero;
+    if (hero.totalMp > hero.currentMp) {
+      this.props.recoverMp(hero.mpRecovery);
+    }
+  }
   attackEnemy = (event, attack) => {  
     event.preventDefault()
     let hero = this.props.hero

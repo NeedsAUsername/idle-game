@@ -3,9 +3,10 @@ import attacks from '../database/attacks.js';
 function heroReducer(state = {
 		name: 'Theif 1st Class: Rogue', 
 		totalHp: 100,
-		currentHp: 100,  
+		currentHp: 100,
 		totalMp: 100, 
-		currentMp: 100, 
+    currentMp: 100,
+    mpRecovery: 1,
 		level: 1,  
 		exp: 0,
 		expToLevelUp: 10,
@@ -22,6 +23,16 @@ function heroReducer(state = {
 	console.log(action) 
 
 	switch(action.type) {
+    case 'RECOVER_MP': 
+      let mpRecovered = action.payload
+      if (state.currentMp + mpRecovered > state.totalMp) {
+        mpRecovered = state.totalMp - state.currentMp
+      }
+      return {
+        ...state,
+        currentMp: state.currentMp + mpRecovered
+      }
+
 		case 'HERO_ATTACKS': 
 			let attack = action.payload 
 			return {
