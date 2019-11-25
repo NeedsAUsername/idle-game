@@ -1,7 +1,6 @@
 function messagesReducer(state = [
   'Welcome to my rpg idle game'
 ], action) {
-console.log(action) 
 
   if (state.length > 5) {
     state.shift()

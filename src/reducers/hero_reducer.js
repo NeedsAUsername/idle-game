@@ -20,7 +20,6 @@ function heroReducer(state = {
 		currentAttack: '',
 		attacks: attacks
 }, action) {
-	console.log(action) 
 
 	switch(action.type) {
     case 'RECOVER_MP': 
@@ -72,8 +71,15 @@ function heroReducer(state = {
 				minRange: state.minRange + 1, 
 				maxRange: state.maxRange + 1,
 				exp: 0,
-				expToLevelUp: state.expToLevelUp + 10
-			}
+        expToLevelUp: state.expToLevelUp + 10,
+        leveledUp: true,
+      }
+      
+    case 'STOP_LEVEL_UP_ANIMATION':
+      return {
+        ...state,
+        leveledUp: false,
+      }
 		
 		default: 
 			return state

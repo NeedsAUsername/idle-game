@@ -1,7 +1,6 @@
 import enemies from '../database/enemies'; 
 
 function heroReducer(state = enemies.snail, action) {
-console.log(action) 
 
   switch(action.type) { 
     case 'ENEMY_TAKES_DAMAGE':  

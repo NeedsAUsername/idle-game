@@ -28,12 +28,12 @@ class Hero extends React.Component {
   render () { 
     let hero = this.props.hero; 
     return (
-      <div className="hero">  
+      <div className={hero.leveledUp ? 'hero level-up' : 'hero'}>
         <h2>Maple Idle</h2> 
         <div className="hero-sprite-container">
           <div className={hero.currentAnimation}></div>
           <div className={!!hero.currentAttack ? hero.currentAttack.className : null}></div>
-        </div>
+        </div> 
         <ul className="resource-list">
         <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
         <Bar color="orange" percentageFull={this.getPercentageHp() + '%'} />
