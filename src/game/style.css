@@ -24,9 +24,10 @@
 
 .message-box {
   grid-area: messageBox;
+  margin-right: 100px;
 }
 
 .player-actions {
   grid-area: playerActions;
-  margin-bottom: 0px;
+  margin-right: 100px;
 }
