@@ -1,7 +1,7 @@
 import React from 'react'; 
 import './style.css'; 
 import Number from '../components/number'; 
-import HealthBar from '../components/healthBar';
+import Bar from '../components/bar';
 import Loot from '../components/loot'; 
 
 class Enemy extends React.Component { 
@@ -47,7 +47,7 @@ class Enemy extends React.Component {
           <div className={"enemy-sprite " + enemy.currentAnimation}></div> 
           {enemy.currentHp === 0 ? <Loot loot={this.calculateLootDrop()} /> : null}
         </div>
-        <HealthBar color={this.getHealthBarColor()} percentageHealth={this.getPercentageHealth() + '%'}/>
+        <Bar color={this.getHealthBarColor()} percentageFull={this.getPercentageHealth() + '%'}/>
 
         <h3>{enemy.name}</h3>
         <li className="stat">Lvl: {enemy.level}</li>

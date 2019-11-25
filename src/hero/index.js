@@ -1,5 +1,6 @@
 import React from 'react'; 
 import './style.css';
+import Bar from '../components/bar';
 
 class Hero extends React.Component { 
   state = {
@@ -16,6 +17,12 @@ class Hero extends React.Component {
     if (hero.totalMp > hero.currentMp) {
       this.props.recoverMp(hero.mpRecovery);
     }
+  }
+  getPercentageHp = () => {
+    return this.props.hero.currentHp/this.props.hero.totalHp * 100
+  }
+  getPercentageMp = () => {
+    return this.props.hero.currentMp/this.props.hero.totalMp * 100
   }
   attackEnemy = (event, attack) => {  
     event.preventDefault()
@@ -82,7 +89,9 @@ class Hero extends React.Component {
           <li className="stat">Exp: {hero.exp} / {hero.expToLevelUp}</li> 
           <li className="stat">Mesos: {hero.mesos}</li>
           <li className="stat">Hp: {hero.currentHp} / {hero.totalHp} </li>
+          <li className="stat"><Bar color="green" percentageFull={this.getPercentageHp() + '%'} /></li>
           <li className="stat">Mp: {hero.currentMp} / {hero.totalMp} </li>
+          <li className="stat"><Bar color="purple" percentageFull={this.getPercentageMp() + '%'}/></li>
           <li className="stat">Range: {hero.minRange} ~ {hero.maxRange}</li>
           <li className="stat">Auto-attack: {hero.autoAttack}</li> 
           <li className="stat">Attack Speed: {hero.attackSpeed / 1000} second</li>
