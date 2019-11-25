@@ -56,7 +56,7 @@ class playerActions extends React.Component {
   }
   render () { 
     return (
-      <div class="player-actions">
+      <div className="player-actions">
         <ul className="attacks-list"><h3>Attacks</h3> 
           {this.renderAttackList()}
         </ul>
