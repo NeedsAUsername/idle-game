@@ -1,6 +1,6 @@
 import enemies from '../database/enemies'; 
 
-function heroReducer(state = enemies.snail, action) {
+function enemyReducer(state = enemies.snail, action) {
 
   switch(action.type) { 
     case 'ENEMY_TAKES_DAMAGE':  
@@ -59,4 +59,4 @@ function heroReducer(state = enemies.snail, action) {
 }
 
 
-export default(heroReducer)
+export default(enemyReducer)
