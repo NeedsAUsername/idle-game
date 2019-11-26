@@ -232,6 +232,243 @@
   background-repeat: no-repeat;
 }
 
+.slash {
+  position: absolute;
+  top: 100px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/slash.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.light-beam {
+  position: absolute;
+  top: 50px; 
+  left: 500px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/light-beam.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slice {
+  position: absolute;
+  top: 150px; 
+  left: 200px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/slice.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.summon-dragon {
+  position: absolute;
+  top: 100px; 
+  left: 250px; 
+  width: 300px;
+  height: 225px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/summon-dragon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.zap {
+  position: absolute;
+  top: 100px; 
+  left: 250px; 
+  width: 300px;
+  height: 225px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/zap.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dark-arrows {
+  position: absolute;
+  top: 150px; 
+  left: 450px; 
+  width: 300px;
+  height: 225px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/dark-arrows.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dark-eye {
+  position: absolute;
+  top: 100px; 
+  left: 300px; 
+  width: 300px;
+  height: 225px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/dark-eye.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.judgement-hammer {
+  position: absolute;
+  top: 75px; 
+  left: 300px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/judgement-hammer.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hail {
+  position: absolute;
+  top: 50px; 
+  left: 450px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/hail.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ice-hammer {
+  position: absolute;
+  top: 130px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/ice-hammer.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dragon-dive {
+  position: absolute;
+  top: 80px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4; 
+  opacity: .8;
+  background: url('../images/attacks/dragon-dive.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.poision-magic {
+  position: absolute;
+  top: 80px; 
+  left: 400px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/poision-magic.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flaming-axe {
+  position: absolute;
+  top: 80px; 
+  left: 200px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/flaming-axe.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bear-smash {
+  position: absolute;
+  top: 100px; 
+  left: 300px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/bear-smash.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.shadow-strike {
+  position: absolute;
+  top: 100px; 
+  left: 300px; 
+  width: 480px;
+  height: 360px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/shadow-strike.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.summon-dark-spirit {
+  position: absolute;
+  top: -20px; 
+  left: 300px; 
+  width: 440px;
+  height: 330px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/summon-dark-spirit.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.monsoon {
+  position: absolute;
+  top: -20px; 
+  left: 300px; 
+  width: 440px;
+  height: 330px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/monsoon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lightning-bolt {
+  position: absolute;
+  top: 20px; 
+  left: 300px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/lightning-bolt.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+
 @media only screen and (max-width: 640px) {
   .hero {
     margin-left: auto; 

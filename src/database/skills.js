@@ -14,7 +14,7 @@ const skills = {
     requiredLevel: 2, 
     damageMultiplier: .5, 
     hits: 4, 
-    animationTime: 1000,
+    animationTime: 950,
     mpCost: 10,
   }, 
   grimReaper: {
@@ -23,8 +23,8 @@ const skills = {
     requiredLevel: 5, 
     damageMultiplier: .4, 
     hits: 5, 
-    animationTime: 2200,
-    mpCost: 20,
+    animationTime: 2000,
+    mpCost: 10,
   }, 
   burningBreaker: {
     name: 'Burning Breaker', 
@@ -32,8 +32,8 @@ const skills = {
     requiredLevel: 10, 
     damageMultiplier: .3, 
     hits: 5, 
-    animationTime: 1500,
-    mpCost: 30,
+    animationTime: 1400,
+    mpCost: 10,
   }, 
   demonLordSecretScroll: {
     name: "Demon Lord's Secret Scroll", 
@@ -42,7 +42,169 @@ const skills = {
     damageMultiplier: 4, 
     hits: 1, 
     animationTime: 1200,
-    mpCost: 40,
+    mpCost: 10,
+  },
+  slash: {
+    name: 'Slash',
+    className: 'slash',
+    requiredLevel: 20,
+    damageMultiplier: .7,
+    hits: 4,
+    animationTime: 1000,
+    mpCost: 10
+  },
+  lightBeam: {
+    name: 'Light Beam',
+    className: 'light-beam',
+    requiredLevel: 20,
+    damageMultiplier: 3,
+    hits: 1,
+    animationTime: 1500,
+    mpCost: 10
+  },
+  slice: {
+    name: 'Slice',
+    className: 'slice',
+    requiredLevel: 20,
+    damageMultiplier: 3,
+    hits: 1,
+    animationTime: 800,
+    mpCost: 10
+  },
+  summonDragon: {
+    name: 'Summon Dragon',
+    className: 'summon-dragon',
+    requiredLevel: 20,
+    damageMultiplier: 2,
+    hits: 2,
+    animationTime: 1500,
+    mpCost: 10
+  },
+  zap: {
+    name: 'zap',
+    className: 'zap',
+    requiredLevel: 20,
+    damageMultiplier: 4,
+    hits: 1,
+    animationTime: 1000,
+    mpCost: 10
+  },
+  darkArrows: {
+    name: 'Dark Arrows',
+    className: 'dark-arrows',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 3,
+    animationTime: 600,
+    mpCost: 10
+  },
+  darkEye: {
+    name: 'Dark Eye',
+    className: 'dark-eye',
+    requiredLevel: 20,
+    damageMultiplier: 2,
+    hits: 2,
+    animationTime: 1200,
+    mpCost: 10
+  },
+  judgementHamer: {
+    name: 'Judgement Hammer',
+    className: 'judgement-hammer',
+    requiredLevel: 20,
+    damageMultiplier: 5,
+    hits: 1,
+    animationTime: 2200,
+    mpCost: 10
+  },
+  hail: {
+    name: 'Hail',
+    className: 'hail',
+    requiredLevel: 20,
+    damageMultiplier: .5,
+    hits: 6,
+    animationTime: 1300,
+    mpCost: 10
+  },
+  iceHammer: {
+    name: 'Ice Hammer',
+    className: 'ice-hammer',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 2,
+    animationTime: 600,
+    mpCost: 10
+  },
+  dragonDive: {
+    name: 'Dragon Dive',
+    className: 'dragon-dive',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 4,
+    animationTime: 1100,
+    mpCost: 10
+  },
+  poisonMagic: {
+    name: 'Poision Magic',
+    className: 'poision-magic',
+    requiredLevel: 20,
+    damageMultiplier: .5,
+    hits: 4,
+    animationTime: 1500,
+    mpCost: 10
+  },
+  flamingAxe: {
+    name: 'Flaming Axe',
+    className: 'flaming-axe',
+    requiredLevel: 20,
+    damageMultiplier: .6,
+    hits: 3,
+    animationTime: 700,
+    mpCost: 10
+  },
+  bearSmash: {
+    name: 'Bear Smash',
+    className: 'bear-smash',
+    requiredLevel: 20,
+    damageMultiplier: .6,
+    hits: 3,
+    animationTime: 700,
+    mpCost: 10
+  },
+  shadowStrike: {
+    name: 'Shadow Strike',
+    className: 'shadow-strike',
+    requiredLevel: 20,
+    damageMultiplier: 2,
+    hits: 2,
+    animationTime: 700,
+    mpCost: 10
+  },
+  summonDarkSpirit: {
+    name: 'Summon Dark Spirit',
+    className: 'summon-dark-spirit',
+    requiredLevel: 20,
+    damageMultiplier: 2,
+    hits: 5,
+    animationTime: 3000,
+    mpCost: 10
+  },
+  monsoon: {
+    name: 'Monsoon',
+    className: 'monsoon',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 5,
+    animationTime: 2800,
+    mpCost: 10
+  },
+  lightningBolt: {
+    name: 'Lightning Bolt',
+    className: 'lightning-bolt',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 2,
+    animationTime: 800,
+    mpCost: 10
   }
 }
 
