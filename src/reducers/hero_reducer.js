@@ -1,4 +1,4 @@
-import attacks from '../database/attacks.js';
+import skills from '../database/skills.js';
 
 function heroReducer(state = {
 		name: 'Beginner Rogue', 
@@ -18,7 +18,7 @@ function heroReducer(state = {
 		attackSpeed: 1000, 
 		currentAnimation: 'standing', 
 		currentAttack: '',
-		attacks: attacks
+    skills: skills
 }, action) {
 
 	switch(action.type) {
@@ -77,12 +77,12 @@ function heroReducer(state = {
 
     case 'CHANGE_STAR':
       let star = action.payload
-      let newAttacks = {...state.attacks}
-      newAttacks.basicAttack.className = star.className
+      let newSkills = {...state.skills}
+      newSkills.basicAttack.className = star.className
       return {
         ...state,
         mesos: state.mesos - star.cost,
-        attacks: newAttacks
+        skills: newSkills
       }
       
     case 'STOP_LEVEL_UP_ANIMATION':

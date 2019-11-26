@@ -41,7 +41,7 @@ class Game extends React.Component {
     if (this.state.currentMenu === 'attacks') {
       return <Skills hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack} />
     } else if (this.state.currentMenu === 'equips') {
-      return <Equips currentStar={this.props.hero.attacks.basicAttack.className} changeStar={this.props.changeStar} />
+      return <Equips currentStar={this.props.hero.skills.basicAttack.className} changeStar={this.props.changeStar} />
     }
   }
 

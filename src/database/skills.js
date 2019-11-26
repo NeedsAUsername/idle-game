@@ -1,4 +1,4 @@
-const attacks = {
+const skills = {
   basicAttack: {
     name: 'Basic Attack', 
     className: 'star subi', 
@@ -46,4 +46,4 @@ const attacks = {
   }
 }
 
-export default attacks;
+export default skills;

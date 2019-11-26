@@ -46,20 +46,20 @@ class skills extends React.Component {
     return damageArray;
   }
 
-  renderAttackList = () => {
+  renderSkillsList = () => {
     let hero = this.props.hero
-    let heroAttackKeys = Object.keys(hero.attacks)
-    return heroAttackKeys.map(attackKey => {
-      let attack = hero.attacks[attackKey]; 
-      return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)}
-       style={this.styleAttackButton()}>{`${attack.name} (${attack.mpCost} mp)`}</li></div>
+    let skillKeys = Object.keys(hero.skills)
+    return skillKeys.map(skillKey => {
+      let skill = hero.skills[skillKey]; 
+      return <div key={skillKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, skill)}
+       style={this.styleAttackButton()}>{`${skill.name} (${skill.mpCost} mp)`}</li></div>
     })
   }
 
   render () { 
     return (
       <ul className="attacks-list"><h3>Attacks</h3> 
-        {this.renderAttackList()}
+        {this.renderSkillsList()}
       </ul>
     )
   }
