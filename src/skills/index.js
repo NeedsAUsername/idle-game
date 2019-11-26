@@ -1,9 +1,8 @@
 
 import React from 'react'; 
 import './style.css';
-import equips from '../database/equips';
 
-class playerActions extends React.Component {  
+class skills extends React.Component {  
   state = {
     readyToAttack: true
   }
@@ -52,46 +51,18 @@ class playerActions extends React.Component {
     let heroAttackKeys = Object.keys(hero.attacks)
     return heroAttackKeys.map(attackKey => {
       let attack = hero.attacks[attackKey]; 
-      return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)} style={this.styleAttackButton()}>{attack.name}</li></div>
-    })
-  }
-  
-  changeStar = (event, star) => {
-    event.preventDefault();
-    this.props.changeStar(star);
-  }
-  renderStarsList = () => {
-    const starKeys = Object.keys(equips.stars);
-    return starKeys.map(key => {
-      let star = equips.stars[key];
-      let starDetails = `${star.name} Cost: ${star.cost}`
-      if (this.props.hero.attacks.basicAttack.className === star.className) {
-        starDetails += ' (Current)'
-      }
-      return <div key={key} ><li className="button" onClick={(event) => this.changeStar(event, star)}>{starDetails}</li></div>
+      return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)}
+       style={this.styleAttackButton()}>{`${attack.name} (${attack.mpCost} mp)`}</li></div>
     })
   }
 
-  changeStar = (event, star) => {
-    event.preventDefault()
-    this.props.changeStar(star)
-  }
   render () { 
     return (
-      <div className="player-actions">
-        <ul className="attacks-list"><h3>Attacks</h3> 
-          {this.renderAttackList()}
-        </ul>
-        <ul className="skill-tree"><h3>Skill Tree</h3>
-          <li>Coming Soon</li>
-        </ul>
-        <ul className="equipment"><h3>Equipment</h3>
-          {this.renderStarsList()}
-          <li>Coming Soon</li>
-        </ul>
-      </div>
+      <ul className="attacks-list"><h3>Attacks</h3> 
+        {this.renderAttackList()}
+      </ul>
     )
   }
 }
 
-export default playerActions;
+export default skills;

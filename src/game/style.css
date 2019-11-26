@@ -3,10 +3,10 @@
   max-height: 100vh;
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr; 
-  grid-template-areas: "hero enemy playerActions"
-                        "hero enemy-list messageBox"
+  grid-template-areas: "hero enemy menu"
+                        "hero enemy messageBox"
                         "hero enemy-list messageBox"  
-} 
+}
 
 .hero {
   grid-area: hero;
@@ -17,6 +17,7 @@
 } 
 
 .enemies-list {
+  margin-bottom: 25px;
   grid-area: enemy-list;
   display: flex; 
   flex-direction: column;
@@ -27,7 +28,8 @@
   margin-right: 100px;
 }
 
-.player-actions {
-  grid-area: playerActions;
+.menu {
+  grid-area: menu;
   margin-right: 100px;
+  overflow: auto;
 }

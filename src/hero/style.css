@@ -5,6 +5,10 @@
 .stat {
   list-style: none;
 }
+.level {
+  text-align: left;
+  font-weight: bold;
+}
 
 .hero {
   margin-left: 100px;

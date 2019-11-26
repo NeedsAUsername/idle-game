@@ -4,7 +4,8 @@ import './style.css';
 import Hero from '../hero'; 
 import Enemy from '../enemy';  
 import enemies from '../database/enemies';
-import PlayerActions from '../playerActions';
+import Skills from '../skills';
+import Equips from '../equips';
 import MessageBox from '../messageBox'; 
 import {recoverMp} from '../actions/hero/recoverMp';
 import {attack} from '../actions/hero/attack';
@@ -15,6 +16,10 @@ import {sendMessage} from '../actions/messageBox/sendMessage';
 
 
 class Game extends React.Component { 
+  state = {
+    menus: ['attacks', 'equips'],
+    currentMenu: 'attacks'
+  }
 
   calculateAttack = (hero, attack, err) => {
     if (err) {
@@ -32,6 +37,24 @@ class Game extends React.Component {
     )
   )
 
+  renderMenu = () => {
+    if (this.state.currentMenu === 'attacks') {
+      return <Skills hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack} />
+    } else if (this.state.currentMenu === 'equips') {
+      return <Equips currentStar={this.props.hero.attacks.basicAttack.className} changeStar={this.props.changeStar} />
+    }
+  }
+
+  toggleMenu = (menu) => {
+    this.setState({
+      ...this.state, 
+      currentMenu: menu
+    })
+  }
+
+  renderMenuToggles = () => {
+    return this.state.menus.map(menu => <button onClick={(event) => this.toggleMenu(menu)}>{menu}</button>)
+  }
   render () { 
     return (
       <main className="game">
@@ -41,8 +64,10 @@ class Game extends React.Component {
           <h4>Choose Monster</h4>
           {this.renderEnemiesList()}
         </div>
-        <PlayerActions hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack}
-          changeStar={this.props.changeStar} />
+        <div className="menu">
+          {this.renderMenuToggles()}
+          {this.renderMenu()}
+        </div>
         <MessageBox messages={this.props.messages} />
       </main>
     )
