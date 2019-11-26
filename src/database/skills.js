@@ -185,7 +185,7 @@ const skills = {
     requiredLevel: 20,
     damageMultiplier: 2,
     hits: 5,
-    animationTime: 3000,
+    animationTime: 2800,
     mpCost: 10
   },
   monsoon: {
@@ -194,7 +194,7 @@ const skills = {
     requiredLevel: 20,
     damageMultiplier: 1,
     hits: 5,
-    animationTime: 2800,
+    animationTime: 2700,
     mpCost: 10
   },
   lightningBolt: {
