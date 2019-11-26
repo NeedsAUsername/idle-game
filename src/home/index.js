@@ -9,7 +9,9 @@ class Home extends React.Component {
         <a href='/game' className="link">Play</a>
         <p>Check out the Github source code <a href="https://github.com/NeedsAUsername/idle-game">here</a></p> 
         <p>Characters from Maplestory</p> 
-        <ul>Dev version 6.00</ul>
+        <ul>Dev version 6.10 11/26/2019</ul>
+          <li>adds more hero skills</li>
+        <ul>Dev version 6.00 11/26/2019</ul>
           <li>implements equipment feature, with user able to change their throwing stars</li>
           <li>minor UI changes, and component refactoring</li>
         <ul>Dev version 5.10 11/25/2019</ul>
