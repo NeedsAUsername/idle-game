@@ -74,6 +74,14 @@ function heroReducer(state = {
         expToLevelUp: state.expToLevelUp + 10,
         leveledUp: true,
       }
+
+    case 'CHANGE_STAR':
+      let newAttacks = {...state.attacks};
+      newAttacks.basicAttack.className = 'star ' + action.payload;
+      return {
+        ...state,
+        attacks: newAttacks
+      }
       
     case 'STOP_LEVEL_UP_ANIMATION':
       return {

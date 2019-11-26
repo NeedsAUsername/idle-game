@@ -80,6 +80,90 @@
     background-position: -195px -655px;
   }
 }
+.wolbi {
+  background-position: 5px -695px;
+  animation: wolbi .2s steps(2) infinite, 
+            throw 2s linear infinite
+}
+@keyframes wolbi {
+  100% {
+    background-position: -190px -695px;
+  }
+}
+.mokbi {
+  background-position: 5px -735px;
+  animation: mokbi .2s steps(2) infinite, 
+            throw 2s linear infinite
+}
+@keyframes mokbi {
+  100% {
+    background-position: -190px -735px;
+  }
+}
+.kumbi {
+  background-position: 5px -780px; 
+  animation: kumbi .2s steps(2) infinite, 
+             throw 2s linear infinite
+}
+@keyframes kumbi {
+    100% {
+    background-position: -185px -780px;
+  }
+}
+.tobi {
+  background-position: 10px -835px; 
+  animation: tobi .2s steps(2) infinite, 
+             throw 2s linear infinite
+}
+@keyframes tobi {
+    100% {
+    background-position: -185px -835px;
+  }
+}
+.steely {
+  background-position: 0 -875px;
+  animation: steely .2s steps(2) infinite, 
+            throw 2s linear infinite
+}
+@keyframes steely {
+  100% {
+    background-position: -192px -875px;
+  }
+}
+.ilbi {
+  background-position: 0 -923px;
+  animation: ilbi .2s steps(2) infinite, 
+            throw 2s linear infinite
+}
+@keyframes ilbi {
+  100% {
+    background-position: -193px -923px;
+  }
+}
+.crystal-ilbi {
+  background-position: 7px -1325px;
+  animation: crystal-ilbi .2s steps(2) infinite, 
+            throw 2s linear infinite
+}
+@keyframes crystal-ilbi {
+  100% {
+    background-position: -185px -1325px;
+  }
+}
+.snowball {
+  position: relative;
+  bottom: 50px;
+  height: 120px;
+  width: 70px;
+  background-position: 0px -25px;
+  animation: snowball 2s steps(8) infinite, 
+            throw 2s linear infinite
+}
+@keyframes snowball {
+  100% {
+    background-position: 100% -25px;
+  }
+}
 
 
 @keyframes throw {

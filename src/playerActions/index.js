@@ -1,6 +1,7 @@
 
 import React from 'react'; 
 import './style.css';
+import { changeStar } from '../actions/hero/changeStar';
 
 class playerActions extends React.Component {  
   state = {
@@ -47,12 +48,17 @@ class playerActions extends React.Component {
   }
 
   renderAttackList = () => {
-    let hero = this.props.hero; 
+    let hero = this.props.hero
     let heroAttackKeys = Object.keys(hero.attacks)
     return heroAttackKeys.map(attackKey => {
       let attack = hero.attacks[attackKey]; 
       return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)} style={this.styleAttackButton()}>{attack.name}</li></div>
     })
+  }
+
+  changeStar = (event) => {
+    event.preventDefault()
+    this.props.changeStar('ilbi')
   }
   render () { 
     return (
@@ -64,6 +70,7 @@ class playerActions extends React.Component {
           <li>Coming Soon</li>
         </ul>
         <ul className="equipment"><h3>Equipment</h3>
+          <button onClick={this.changeStar}>Change Star</button>
           <li>Coming Soon</li>
         </ul>
       </div>

@@ -10,6 +10,7 @@ import {recoverMp} from '../actions/hero/recoverMp';
 import {attack} from '../actions/hero/attack';
 import {levelUp} from '../actions/hero/levelUp'; 
 import {changeEnemy} from '../actions/enemy/change';
+import {changeStar} from '../actions/hero/changeStar';
 import {sendMessage} from '../actions/messageBox/sendMessage';
 
 
@@ -40,7 +41,8 @@ class Game extends React.Component {
           <h4>Choose Monster</h4>
           {this.renderEnemiesList()}
         </div>
-        <PlayerActions hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack}/>
+        <PlayerActions hero={this.props.hero} enemyCurrentHp={this.props.enemy.currentHp} calculateAttack={this.calculateAttack}
+          changeStar={this.props.changeStar} />
         <MessageBox messages={this.props.messages} />
       </main>
     )
@@ -55,4 +57,4 @@ const mapStateToProps = (store) => {
   }
 }
 
-export default connect(mapStateToProps, {recoverMp, attack, levelUp, changeEnemy, sendMessage})(Game);
+export default connect(mapStateToProps, {recoverMp, attack, levelUp, changeEnemy, changeStar, sendMessage})(Game);
