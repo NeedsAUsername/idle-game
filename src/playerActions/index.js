@@ -1,7 +1,7 @@
 
 import React from 'react'; 
 import './style.css';
-import { changeStar } from '../actions/hero/changeStar';
+import equips from '../database/equips';
 
 class playerActions extends React.Component {  
   state = {
@@ -55,10 +55,26 @@ class playerActions extends React.Component {
       return <div key={attackKey} ><li className="button attack" onClick={(event) => this.attackEnemy(event, attack)} style={this.styleAttackButton()}>{attack.name}</li></div>
     })
   }
+  
+  changeStar = (event, star) => {
+    event.preventDefault();
+    this.props.changeStar(star);
+  }
+  renderStarsList = () => {
+    const starKeys = Object.keys(equips.stars);
+    return starKeys.map(key => {
+      let star = equips.stars[key];
+      let starDetails = `${star.name} Cost: ${star.cost}`
+      if (this.props.hero.attacks.basicAttack.className === star.className) {
+        starDetails += ' (Current)'
+      }
+      return <div key={key} ><li className="button" onClick={(event) => this.changeStar(event, star)}>{starDetails}</li></div>
+    })
+  }
 
-  changeStar = (event) => {
+  changeStar = (event, star) => {
     event.preventDefault()
-    this.props.changeStar('ilbi')
+    this.props.changeStar(star)
   }
   render () { 
     return (
@@ -70,7 +86,7 @@ class playerActions extends React.Component {
           <li>Coming Soon</li>
         </ul>
         <ul className="equipment"><h3>Equipment</h3>
-          <button onClick={this.changeStar}>Change Star</button>
+          {this.renderStarsList()}
           <li>Coming Soon</li>
         </ul>
       </div>

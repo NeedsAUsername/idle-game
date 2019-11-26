@@ -76,10 +76,12 @@ function heroReducer(state = {
       }
 
     case 'CHANGE_STAR':
-      let newAttacks = {...state.attacks};
-      newAttacks.basicAttack.className = 'star ' + action.payload;
+      let star = action.payload
+      let newAttacks = {...state.attacks}
+      newAttacks.basicAttack.className = star.className
       return {
         ...state,
+        mesos: state.mesos - star.cost,
         attacks: newAttacks
       }
       

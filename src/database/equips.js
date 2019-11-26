@@ -2,47 +2,47 @@ const stars = {
   subi: {
     cost: 0,
     name: 'Subi',
-    className: 'subi'
+    className: 'star subi'
   },
   wolbi: {
     cost: 0,
     name: 'Wolbi',
-    className: 'wolbi' 
+    className: 'star wolbi' 
   },
   mokbi: {
     cost: 0,
     name: 'Mokbi',
-    className: 'mokbi'
+    className: 'star mokbi'
   },
   kumbi: {
     cost: 0,
     name: 'Kumbi',
-    className: 'kumbi'
+    className: 'star kumbi'
   },
   tobi: {
     cost: 0,
     name: 'Tobi',
-    className: 'tobi'
+    className: 'star tobi'
   },
   steely: {
     cost: 0,
     name: 'Steely',
-    className: 'steely'
+    className: 'star steely'
   },
   ilbi: {
     cost: 0,
     name: 'Ilbi',
-    className: 'ilbi'
+    className: 'star ilbi'
   },
   crystalIlbi: {
     cost: 0,
     name: 'Crystal Ilbi',
-    className: 'crystal-ilbi'
+    className: 'star crystal-ilbi'
   },
   snowball: {
     cost: 0,
     name: 'Snowball',
-    className: 'snowball'
+    className: 'star snowball'
   }
 }
 
