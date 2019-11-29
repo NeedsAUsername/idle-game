@@ -205,6 +205,123 @@ const skills = {
     hits: 2,
     animationTime: 800,
     mpCost: 10
+  },
+  summonDamien: {
+    name: 'Summon Damien',
+    className: 'summon-damien',
+    requiredLevel: 20,
+    damageMultiplier: .75,
+    hits: 3,
+    animationTime: 600,
+    mpCost: 10,
+  },
+  bearSpin: {
+    name: 'Bear Spin',
+    className: 'bear-spin',
+    requiredLevel: 20,
+    damageMultiplier: .75,
+    hits: 3,
+    animationTime: 1000,
+    mpCost: 10
+  },
+  flamingHammer: {
+    name: 'Flaming Hammer',
+    className: 'flaming-hammer',
+    requiredLevel: 20,
+    damageMultiplier: 1.5,
+    hits: 2,
+    animationTime: 700,
+    mpCost: 10
+  },
+  hyperBeam: {
+    name: 'Hyper Beam',
+    className: 'hyper-beam',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 4,
+    animationTime: 1300,
+    mpCost: 10
+  },
+  flameWhirl: {
+    name: 'Flame Whirl',
+    className: 'flame-whirl',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 4,
+    animationTime: 900,
+    mpCost: 10
+  },
+  flameSpirit: {
+    name: 'Flame Spirit',
+    className: 'flame-spirit',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 4,
+    animationTime: 2800,
+    mpCost: 10
+  },
+  comboStrike: {
+    name: 'Combo Strike',
+    className: 'combo-strike',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 5,
+    animationTime: 3000,
+    mpCost: 10
+  },
+  iceStrike: {
+    name: 'Ice Strike',
+    className: 'ice-strike',
+    requiredLevel: 20,
+    damageMultiplier: 1.5,
+    hits: 2,
+    animationTime: 1000,
+    mpCost: 10
+  },
+  rageUprising: {
+    name: 'Rage Uprising',
+    className: 'rage-uprising',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 3,
+    animationTime: 2500,
+    mpCost: 10
+  },
+  summonZakum: {
+    name: 'Summon Zakum',
+    className: 'summon-zakum',
+    requiredLevel: 20,
+    damageMultiplier: .8,
+    hits: 4,
+    animationTime: 2500,
+    mpCost: 10
+  },
+  summonDarkMage: {
+    name: 'Summon Dark Mage',
+    className: 'summon-dark-mage',
+    requiredLevel: 20,
+    damageMultiplier: 1,
+    hits: 4,
+    animationTime: 3000,
+    mpCost: 10
+  },
+  summonHilla: {
+    name: 'Summon Hilla',
+    className: 'summon-hilla',
+    requiredLevel: 20,
+    damageMultiplier: 2.5,
+    hits: 1,
+    animationTime: 3000,
+    mpCost: 10
+  },
+  shadowStrike2: {
+    name: 'Shadow Strike 2',
+    className: 'shadow-strike-2',
+    requiredLevel: 20,
+    damageMultiplier: .75,
+    hits: 5,
+    animationTime: 2500,
+    mpCost: 20
   }
 }
 

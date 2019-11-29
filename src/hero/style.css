@@ -466,6 +466,174 @@
   background-repeat: no-repeat;
 }
 
+.summon-damien {
+  position: absolute;
+  top: 50px; 
+  left: 400px; 
+  width: 300px;
+  height: 225px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/summon-damien.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bear-spin{
+  position: absolute;
+  top: 100px; 
+  left: 300px; 
+  width: 440px;
+  height: 330px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/bear-spin.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flaming-hammer{
+  position: absolute;
+  top: 0px; 
+  left: 300px; 
+  width: 440px;
+  height: 330px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/flaming-hammer.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hyper-beam {
+  position: absolute;
+  top: 130px; 
+  left: 220px; 
+  width: 660px;
+  height: 490px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/hyper-beam.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flame-whirl {
+  position: absolute;
+  top: 50px; 
+  left: 250px; 
+  width: 400px;
+  height: 300px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/flame-whirl.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flame-spirit {
+  position: absolute;
+  top: -50px; 
+  left: 250px; 
+  width: 540px;
+  height: 410px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/flame-spirit.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.combo-strike {
+  position: absolute;
+  top: 50px; 
+  left: 250px; 
+  width: 400px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/combo-strike.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ice-strike {
+  position: absolute;
+  top: -50px; 
+  left: 300px; 
+  width: 400px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/ice-strike.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rage-uprising {
+  position: absolute;
+  top: -50px; 
+  left: 400px; 
+  width: 400px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/rage-uprising.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.summon-zakum {
+  position: absolute;
+  top: 0px; 
+  left: 200px; 
+  width: 400px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/summon-zakum.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.summon-dark-mage {
+  position: absolute;
+  top: 0px; 
+  left: 300px; 
+  width: 600px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/summon-dark-mage.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.summon-hilla {
+  position: absolute;
+  top: 0px; 
+  left: 250px; 
+  width: 600px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/summon-hilla.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.shadow-strike-2 {
+  position: absolute;
+  top: 0px; 
+  left: 250px; 
+  width: 600px;
+  height: 400px;
+  z-index: 4;
+  opacity: .8;
+  background: url('../images/attacks/shadow-strike-2.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 
 
