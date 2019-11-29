@@ -18,7 +18,7 @@ export function attack(attack, enemy, hero) {
       if (enemy.currentHp <= totalDamage) { 
         if ((hero.exp + enemy.exp) >= hero.expToLevelUp) { 
           dispatch(defeatsEnemyAndLevelsUp(enemy))
-          setTimeout(() => dispatch(stopLevelUpAnimation()), 2000) 
+          setTimeout(() => dispatch(stopLevelUpAnimation()), 1800) 
         } else {
           dispatch(defeatsEnemy(enemy))
         } 
